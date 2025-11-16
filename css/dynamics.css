@@ -9,6 +9,16 @@
   font-size: 16px;
 }
 
+.tips-complemento {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9000;
+  display: none;
+}
+
 .tips {
   display: flex !important;
   justify-content: center !important;
