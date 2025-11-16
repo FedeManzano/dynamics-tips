@@ -38,7 +38,7 @@
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.1.0",
     "braces": "^3.0.2",
-    "css-loader": "^5.0.0",
+    "css-loader": "^7.1.2",
     "lodash": "^4.17.19",
     "style-loader": "^2.0.0",
     "webpack": "^5.2.0",
