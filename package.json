@@ -1,47 +1,39 @@
 {
   "name": "dynamics-tips",
-  "version": "1.8.0",
-  "description": "Objetos dinamicos que se añaden debido a estimulos del usuario.",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/FedericoManzano/dynamics-tips-v1.0.0.git"
-  },
+  "version": "2.1.5",
+  "description": "Objetos dinamicos que se añaden debido a eventos del usuario.",
   "keywords": [
     "tips",
     "tooltips",
     "dinamicos",
     "comentarios"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FedericoManzano/dynamics-tips-v1.0.0.git"
+  },
+  "license": "MIT",
+  "author": "Federico Manzano",
+  "main": "app.js",
   "files": [
     "dist/{css,js}/*.{css,js,map}",
     "src/{modulos}/**/*.{js}",
     "src/**/*.js",
     "css/**/*.css"
   ],
-  "author": "Federico Manzano",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/FedericoManzano/dynamics-tips-v1.0.0/issues"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack"
   },
-  "homepage": "https://github.com/FedericoManzano/dynamics-tips-v1.0.0#readme",
   "dependencies": {
     "jquery": "^3.5.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.5",
-    "babel": "^6.23.0",
-    "babel-cli": "^6.26.0",
-    "babel-loader": "^8.1.0",
-    "braces": "^3.0.2",
-    "css-loader": "^5.0.0",
-    "lodash": "^4.17.19",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.2.0",
-    "webpack-cli": "^4.0.0"
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "babel": "^5.8.38",
+    "babel-loader": "^10.0.0",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1"
   }
 }
