@@ -1,3 +1,9 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .tips {
 
     font-size: 16px;
@@ -17,7 +23,7 @@
     max-height: 40px !important;
     min-height: 40px !important;
 
-    z-index: superposicion(ms) !important;
+    z-index: 10000;
     transform: translate(0);
     transition: transform 0.3s ease;
 }
