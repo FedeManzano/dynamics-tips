@@ -10,48 +10,55 @@
 }
 
 .tips {
-  border: none;
-  position: absolute;
-  padding: 5px;
-  background-color: rgba(0, 0, 0, 0.863);
-  color: white;
-  border-radius: 5px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: absolute !important;
+  padding: 5px !important;
+  color: white !important;
+  background-color: rgba(0, 0, 0, 0.863) !important;
+  border-radius: 5px !important;
+  white-space: nowrap !important;
   transform: translate(0);
-  transition: transform 0.3s;
-  text-align: center;
+  transition: transform 0.3s ease;
 }
 .tips .mueca-der {
   position: absolute;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
   border-left: 5px solid rgba(0, 0, 0, 0.863);
-  top: calc(50% + 3.5px);
-  left: 100%;
+  top: calc(50% - 4.5px);
+  left: calc(100% - 1px);
 }
 .tips .mueca-izq {
-  position: absolute;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-right: 5px solid rgba(0, 0, 0, 0.863);
-  top: calc(50% - 4.5px);
-  left: -5px;
-  z-index: 1000000000000000;
+  position: absolute !important;
+  border-top: 5px solid transparent !important;
+  border-bottom: 5px solid transparent !important;
+  border-right: 5px solid rgba(0, 0, 0, 0.863) !important;
+  top: calc(50% - 4.5px) !important;
+  left: -4.5px !important;
 }
 .tips .mueca-arr {
   position: absolute;
   border-left: 5px solid transparent;
   border-bottom: 5px solid rgba(0, 0, 0, 0.863);
   border-right: 5px solid transparent;
-  top: -5px;
-  left: calc(50% - 5px);
+  top: -4px;
+  left: calc(50% - 4.5px);
 }
-.tips .tips .mueca-aba {
+.tips .mueca-aba {
   position: absolute;
   border-left: 5px solid transparent;
   border-top: 5px solid rgba(0, 0, 0, 0.863);
   border-right: 5px solid transparent;
-  bottom: -5px;
-  left: calc(50% - 5px);
+  bottom: -4.5px;
+  left: calc(50% - 4.5px);
+}
+
+.tips-ele {
+  z-index: 0;
+  position: relative;
+  overflow: visible !important;
 }
 
 /*# sourceMappingURL=dynamics.css.map */

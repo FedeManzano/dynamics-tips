@@ -8,14 +8,17 @@ $tam-flecha: 5px;
 
 .tips 
 {
-    border: none;
-    position: absolute;
-    padding: $padding;
-    background-color: $bg;
-    color: $color;
-    border-radius: $border-radius;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: absolute !important; 
+    padding: $padding !important;
+    color: $color !important;
+    background-color: $bg !important;
+    border-radius: $border-radius !important;
+    white-space: nowrap !important;
     transform: translate(0);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 
 
     @mixin flecha_derecha () {
@@ -23,18 +26,17 @@ $tam-flecha: 5px;
         border-top: $tam-flecha solid transparent;
         border-bottom: $tam-flecha solid transparent;
         border-left: $tam-flecha solid $bg;
-        top: calc(50% + 3.5px);
-        left: 100%
+        top: calc(50% - 4.5px);
+        left: calc(100% - 1px);
     }
     
      @mixin flecha_izquierda () {
-        position: absolute;
-        border-top: $tam-flecha solid transparent;
-        border-bottom: $tam-flecha solid transparent;
-        border-right: $tam-flecha solid  $bg;
-        top: calc(50% - 4.5px);
-        left: -5px;
-        z-index: 1000000000000000;
+        position: absolute !important;
+        border-top: $tam-flecha solid transparent !important;
+        border-bottom: $tam-flecha solid transparent !important;
+        border-right: $tam-flecha solid  $bg !important;
+        top: calc(50% - 4.5px) !important;
+        left: -4.5px !important;
     }    
 
     @mixin flecha_abajo () {
@@ -42,8 +44,8 @@ $tam-flecha: 5px;
         border-left: $tam-flecha solid transparent;
         border-top: $tam-flecha solid $bg;
         border-right: $tam-flecha solid transparent;
-        bottom: -5px;
-        left: calc(50% - 5px)
+        bottom: -4.5px;
+        left: calc(50% - 4.5px)
     }
 
     @mixin flecha_arriba() {
@@ -51,8 +53,8 @@ $tam-flecha: 5px;
         border-left: $tam-flecha solid transparent;
         border-bottom: $tam-flecha solid $bg;
         border-right: $tam-flecha solid transparent;
-        top: -5px;
-        left: calc(50% - 5px)
+        top: -4px;
+        left: calc(50% - 4.5px)
     }
 
     .mueca-der {
@@ -68,8 +70,14 @@ $tam-flecha: 5px;
     }
 
 
-    .tips .mueca-aba {
+    .mueca-aba {
         @include flecha_abajo()
     }
 
+}
+
+.tips-ele {
+    z-index: 0;
+    position: relative ;
+    overflow: visible !important;
 }
