@@ -1,0 +1,75 @@
+
+$bg: rgba(0, 0, 0, 0.863);
+$padding: 5px;
+$color: white;
+$border-radius: 5px;
+$tam-flecha: 5px;
+
+
+.tips 
+{
+    border: none;
+    position: absolute;
+    padding: $padding;
+    background-color: $bg;
+    color: $color;
+    border-radius: $border-radius;
+    transform: translate(0);
+    transition: transform 0.3s;
+
+
+    @mixin flecha_derecha () {
+        position: absolute;
+        border-top: $tam-flecha solid transparent;
+        border-bottom: $tam-flecha solid transparent;
+        border-left: $tam-flecha solid $bg;
+        top: calc(50% + 3.5px);
+        left: 100%
+    }
+    
+     @mixin flecha_izquierda () {
+        position: absolute;
+        border-top: $tam-flecha solid transparent;
+        border-bottom: $tam-flecha solid transparent;
+        border-right: $tam-flecha solid  $bg;
+        top: calc(50% - 4.5px);
+        left: -5px;
+        z-index: 1000000000000000;
+    }    
+
+    @mixin flecha_abajo () {
+        position: absolute;
+        border-left: $tam-flecha solid transparent;
+        border-top: $tam-flecha solid $bg;
+        border-right: $tam-flecha solid transparent;
+        bottom: -5px;
+        left: calc(50% - 5px)
+    }
+
+    @mixin flecha_arriba() {
+        position: absolute;
+        border-left: $tam-flecha solid transparent;
+        border-bottom: $tam-flecha solid $bg;
+        border-right: $tam-flecha solid transparent;
+        top: -5px;
+        left: calc(50% - 5px)
+    }
+
+    .mueca-der {
+        @include flecha_derecha()
+    }
+
+    .mueca-izq {
+        @include flecha_izquierda()
+    }
+
+    .mueca-arr {
+        @include flecha_arriba()
+    }
+
+
+    .tips .mueca-aba {
+        @include flecha_abajo()
+    }
+
+}
