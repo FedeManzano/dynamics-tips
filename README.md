@@ -15,7 +15,16 @@ y reutilización del código se define por separado aumentando su disponibilidad
  
 ## :green_book: Documentación
 
+### :link: Enlaces 
+
 - [ToolTips](https://bodystyle.webcindario.com/paginas/tooltips.html) 
 - [Comentarios](https://bodystyle.webcindario.com/paginas/comentarios.html) 
 - [Dropdown](https://bodystyle.webcindario.com/paginas/dropdown.html) 
 - [TipsPropios](https://bodystyle.webcindario.com/paginas/personalizados.html) 
+
+### :arrow_down: Descarga
+
+Se puede descargar la documentación de Bodystyle la cual incluye toda la información necesaria para poder utilizar los 
+elementos dinámicos.
+
+[Bodystyle Docs 2.0.0](https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk)
