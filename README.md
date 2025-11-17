@@ -10,9 +10,10 @@
 [![VERSION](https://img.shields.io/badge/VERSION-2.5.0-red)](https://github.com/FedeManzano/bodystyle/releases/tag/v4.8.0)
 
 Componentes que se incorporan de manera dinámica que le permiten al usuario disponer de información sobre determinados elementos dentro del DOM. <br>
-Esta biblioteca se creó con el fin de disponer de las funcionalidades que permitan posicionar todos los elementos dinámicos informativos de[Bodystyle](https://github.com/FedeManzano/bodystyle) una biblioteca dedicada al desarrollo del FrontEnd y que por razones de modularización 
-y reutilización del código se define por separado aumentando la disponibilidad.
+Esta biblioteca se creó con el fin de disponer de las funcionalidades que permitan posicionar todos los elementos dinámicos informativos de   [Bodystyle](https://github.com/FedeManzano/bodystyle) una biblioteca dedicada al desarrollo del FrontEnd y que por razones de modularización 
+y reutilización del código se define por separado aumentando su disponibilidad.
  
+## :green_book: Documentación
 
 - [ToolTips](https://bodystyle.webcindario.com/paginas/tooltips.html) 
 - [Comentarios](https://bodystyle.webcindario.com/paginas/comentarios.html) 
