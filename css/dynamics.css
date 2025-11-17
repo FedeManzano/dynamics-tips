@@ -21,12 +21,15 @@
   display: none;
 }
 
+/**
+
+*/
 .tips {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
   position: absolute !important;
-  padding: 5px !important;
+  padding: 2px 5px 5px 5px !important;
   color: white !important;
   background-color: rgba(0, 0, 0, 0.863) !important;
   border-radius: 5px !important;

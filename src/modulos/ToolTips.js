@@ -1,13 +1,38 @@
+
+/*!
+ * Módulo que permite la gestión de los Tooltips
+ * A partir de la versión 2.5.0 se mejoró 
+ * la apariencia y se cambiaron las funciones DEPRECATED
+ * por las actuales de JQUERY.
+ */
+
+// Dependencia de desarrollo y producción jquery
 import $ from "jquery";
+
+// Módulo de posicionamiento general de todos los módulos
 import Direccion from "./posicionamineto/Direccion";
 
 (function () {
 
+    // Guarda el elemento origen
+    // o sea el elemento disparador
     let origen = null 
+
+    // Elemento dinámico
     let ele = null 
+
+    // Complemento permite desaparecer el 
+    // elemento dinámico asignado
     let comp = null
+
+    // Permite conocer el estado de los 
+    // tootips
     let activo = false
 
+    /**
+     * Evento que permite gestionar los 
+     * tooltips cuando se redimensiona la pantalla.
+     */
     const eventoResize = () => {
         if(activo) {
             $(".mueca-aba").remove()
@@ -19,6 +44,12 @@ import Direccion from "./posicionamineto/Direccion";
     }
 
 
+    /**
+     * Función encargada de posicionar el elemento dinámico
+     * y mostrarlo en pantalla cuando lo requiera el usuario.
+     * @param {Ellmento de origen. Disparador} origen 
+     * @param {Elemento dinámico} ele 
+     */
     const realizarAparicion = (origen, ele) => {
         let pos = $(origen).data("pos")
         Direccion.posicionar(pos, origen, ele, true)
@@ -43,28 +74,31 @@ import Direccion from "./posicionamineto/Direccion";
             activar(origen, ele)
         })
         
-        $(comp).click((e) => {
+        $(comp).on("click",(e) => {
             $(".tips").remove()
             $(".tips-complemento").hide()
             activo = false
         })
     }
 
-
-
-    const eventoHover= (e) => {
-        $(e).hover((e) => {
-            origen = e.target 
-            ele = $("<div class='tips'></div>")
-            $(ele).append($(origen).data("tips"))
-            activar(origen, ele)
-        }, () => {
-            $(ele).remove()
-            activo = false
-        })
+    const MouseEnter = (e) => {
+        origen = e.target 
+        ele = $("<div class='tips'></div>")
+        $(ele).append($(origen).data("tips"))
+        activar(origen, ele)
     }
 
+    const MouseLeave = (e) => {
+        $(ele).remove()
+        activo = false
+    }
 
+    const eventoHover = (e) => {
+        $(e).on({
+            mouseenter : MouseEnter,
+            mouseleave: MouseLeave
+        })
+    }
     const inicializar = () => {
         
         $(".tips-ele").each((index, e) => {
@@ -77,7 +111,7 @@ import Direccion from "./posicionamineto/Direccion";
                 eventoHover(e)
         })
 
-        $(window).resize(eventoResize)
+        $(window).on("resize",eventoResize)
     }
 
     const destroy = () => {

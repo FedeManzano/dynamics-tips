@@ -1,6 +1,6 @@
 {
   "name": "dynamics-tips",
-  "version": "2.1.5",
+  "version": "2.5.0",
   "description": "Objetos dinamicos que se añaden debido a eventos del usuario.",
   "keywords": [
     "tips",
@@ -17,6 +17,7 @@
   "main": "app.js",
   "files": [
     "dist/{css,js}/*.{css,js,map}",
+    "sass/*.{scss}",
     "src/{modulos}/**/*.{js}",
     "src/**/*.js",
     "css/**/*.css"
