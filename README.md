@@ -245,6 +245,42 @@ $tam-flecha: 5px;
 }
 ```
 
+#### Comentarios
+
+Desde el archivo ```_comments.scss``` podemos realizar la misma acción que con los tooltips.
+
+```sass
+/**
+  Desde estas variables podemos modificar los estilos del comentario
+  manteniendo las funciones lógicas que permiten el funcionamiento
+*/
+$bg: rgb(255, 255, 255);
+$border: 1px solid rgba(0, 0, 0, 0.295);
+$border-radius: 5px;
+$padding: 10px;
+$color: rgb(48, 48, 48);
+$fz: 14px;
+
+
+.com-dinamico {
+    position: absolute !important;
+    background-color: $bg;
+    max-width: 270px !important;
+    font-size: $fz;
+    padding: $padding;
+    border-radius: $border-radius;
+    border: $border;
+    color: $color;
+    line-height: 20px;
+    transform: translate(0);
+    transition: transform 0.3s;
+}
+
+.com-trigger {
+    overflow: visible !important;
+}
+```
+
 ### Tooltips
 
 ```html
