@@ -294,8 +294,6 @@ $fz: 14px;
 Desde el archivo ```dropdown.scss``` podemos modificar la lista desplegable del dropdown.
 
 ```sass
-
-
 .dropdown-toggle {
     z-index: 10000000;
     position: relative;
@@ -338,9 +336,70 @@ Desde el archivo ```dropdown.scss``` podemos modificar la lista desplegable del 
 
 ```
 
+#### Toast
+
+```sass
+.toast {
+    position: fixed;
+    padding: 15px;
+    border-radius: 5px;
+    right: 30px;
+    top: 250px;
+    transition: top 1s;
+    background-color: rgb(21, 23, 32);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: subir 1s  0s 1  linear;
+    box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.137);
+}
 
 
-### Tooltips
+.toast .cerrar {
+    position: relative;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.toast .cerrar:hover {
+    background-color: rgba(255, 255, 255, 0.397);
+}
+
+.toast .cerrar::before,
+.toast .cerrar::after  {
+    content:  "";
+    position: absolute;
+    width: 15px;
+    height: 3px;
+    background-color: white;
+    left:  calc(50% - 7.2px);
+    top:  calc(50% - 3px);
+}
+.toast .cerrar::before {
+    transform: rotate(45deg);
+}
+
+
+.toast .cerrar::after {
+    transform: rotate(-45deg);
+}
+
+@keyframes subir {
+    from {
+        top: 300px;
+    }to {
+        top: 75px;
+    }
+}
+```
+
+
+## :one: Tooltips
 
 ```html
 <!DOCTYPE html>
