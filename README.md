@@ -76,7 +76,7 @@ Existen tres formas de agregar la biblioteca a los proyectos:
 
 La primera forma es la descarga y la incorporación de los archivos JS y CSS al proyecto en desarrollo. <br>
 En esta sección se descargarán los archivos procesados y transpilados sin incluir los archivos con el código fuente, los cuales 
-pueden obtenerse conando este mismo repositorio.
+pueden obtenerse clonando este mismo repositorio.
 
 [Dynamics 2.5.0](https://mega.nz/file/kFFGAT4T#hCPWpJDciRYSmvtML8wnv1ZZ_rxX62ozvP5EjPWnKRY)
 
@@ -130,13 +130,120 @@ npm install dytips
 ```
 ## :pushpin: Utilización
 
-Lo primero que hay que hacer cuando queremos utilizar esta biblioteca es inicializar los módulos quq necesitemos, para comodidad 
-del desarrollador existen dos formas: 
-  - Automática (Con añadir el archivo *dynamics.min.js* se inicializan todos los módulos)
-  - Manual (Cada módulo se inicializará con su función específica a través del objeto *DY*)
+Lo primero que hay que hacer cuando queremos utilizar esta biblioteca es inicializar los módulos que necesitemos, dependiendo
+de los elementos que disparan los eventos estáticos (incluidos dentro del HTML) o dinámicos (se incorporan dentro del html luego de iniciada la página).
+  1. Automática (Con añadir el archivo *dynamics.min.js* se inicializan todos los módulos)
+  2. Manual (Cada módulo se inicializará con su función específica a través del objeto *DY*)
 
 > Cuando los elementos dinámicos están asociados a componentes que no están definidos de manera estática dentro del DOM, sino que 
 se ingresan dinámicamente a través de JS, es necesario inicializar los módulos manualmente.
+
+### :pencil: Modificación
+
+Todos los elementos dinámicos bienen con estilos predefinidos, los cuales pueden ser modificados para poder ajustrlos a nuestras 
+necesidades, desde el código fuente podemos clonar el repositorio, de manera tal de disponer de los archivos ```SASS```.
+
+#### ToolTips 
+
+Desde el archivo ```sass/_tips.scss``` podemos modificar algunas propiedades que permitirán ajustar los estilos y utlizar los elementos dinámicos adaptados al sitio o app en desarrollo.
+
+```sass
+/**
+    Estilos de para los Tooltips
+*/
+
+// Color de fondo
+$bg: rgba(0, 0, 0, 0.863);
+
+// Padding 
+$padding: 2px 5px 5px 5px;
+
+// Color de la letra
+$color: white;
+
+// Redondeado de los bordes
+$border-radius: 5px;
+
+// Tamaño de el elemento donde apunta el tooltips
+$tam-flecha: 5px;
+
+
+.tips 
+{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: absolute !important; 
+    padding: $padding !important;
+    color: $color !important;
+    background-color: $bg !important;
+    border-radius: $border-radius !important;
+    white-space: nowrap !important;
+    transform: translate(0);
+    transition: transform 0.3s ease;
+
+
+    @mixin flecha_derecha () {
+        position: absolute;
+        border-top: $tam-flecha solid transparent;
+        border-bottom: $tam-flecha solid transparent;
+        border-left: $tam-flecha solid $bg;
+        top: calc(50% - 4.5px);
+        left: calc(100% - 1px);
+    }
+    
+     @mixin flecha_izquierda () {
+        position: absolute !important;
+        border-top: $tam-flecha solid transparent !important;
+        border-bottom: $tam-flecha solid transparent !important;
+        border-right: $tam-flecha solid  $bg !important;
+        top: calc(50% - 4.5px) !important;
+        left: -4px !important;
+    }    
+
+    @mixin flecha_abajo () {
+        position: absolute;
+        border-left: $tam-flecha solid transparent;
+        border-top: $tam-flecha solid $bg;
+        border-right: $tam-flecha solid transparent;
+        bottom: -4.5px;
+        left: calc(50% - 4.5px)
+    }
+
+    @mixin flecha_arriba() {
+        position: absolute;
+        border-left: $tam-flecha solid transparent;
+        border-bottom: $tam-flecha solid $bg;
+        border-right: $tam-flecha solid transparent;
+        top: -4px;
+        left: calc(50% - 4.5px)
+    }
+
+    .mueca-der {
+        @include flecha_derecha()
+    }
+
+    .mueca-izq {
+        @include flecha_izquierda()
+    }
+
+    .mueca-arr {
+        @include flecha_arriba()
+    }
+
+
+    .mueca-aba {
+        @include flecha_abajo()
+    }
+
+}
+
+.tips-ele {
+    z-index: 0;
+    position: relative ;
+    overflow: visible !important;
+}
+```
 
 ### Tooltips
 
