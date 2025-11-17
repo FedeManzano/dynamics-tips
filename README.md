@@ -474,4 +474,6 @@ establecen la posición y el evento disparador de la aparición del tooltips.
 
 | Attr      | Descripción |
 |---------  |-------------|
-|data-tips  | Almacena el html que se le quiere mostrar al usuario cuando aparece el tooltips |
+|data-tips  | Almacena el html que se le quiere mostrar al usuario cuando aparece el tooltips                 |
+|data-pos   | Posición donde se pretende que aparezca (TOP / LEFT / RIGHT / BOTTOM) Default: bottom           |
+|data-evt   | Evento disparador (click | hover) por defecto (hover)                                           |
