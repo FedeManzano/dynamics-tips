@@ -1,3 +1,4 @@
+
 import $ from "jquery";
 import Direccion from "./posicionamineto/Direccion";
 
@@ -17,7 +18,7 @@ import Direccion from "./posicionamineto/Direccion";
     const eventoClick = (e) => {
         comp = $("<div class='com-complemento'>")
         $("body").append(comp)
-        $(e).click((e) => {
+        $(e).on("click",(e) => {
             comentario = $("<div class='com-dinamico'></div>")
             origen = e.target
             $(comentario).append($(origen).data("info"))
@@ -27,35 +28,43 @@ import Direccion from "./posicionamineto/Direccion";
             arrancar(origen, comentario)
         })
 
-        $(comp).click((e) => {
+        $(comp).on("click",(e) => {
             $(".com-dinamico").remove()
             $(".com-complemento").hide()
             activo = false
         })
     }
 
+    const MouseEnter = (e) => {
+        comentario = $("<div class='com-dinamico'></div>")
+        origen = e.target
+        $(comentario).append($(origen).data("info"))
+        $("body").append(comentario) 
+        $(comentario).show()
+        arrancar(origen, comentario)
+    }
+
+    const MouseLeave = (e) => {
+        $(".com-dinamico").remove()
+        activo = false
+    }
+
     const eventoHover = (e) => {
-        $(e).hover((e) => {
-            comentario = $("<div class='com-dinamico'></div>")
-            origen = e.target
-            $(comentario).append($(origen).data("info"))
-            $("body").append(comentario) 
-            $(comentario).show()
-            arrancar(origen, comentario)
-        }, () => {
-            $(".com-dinamico").remove()
-            activo = false
+        $(e).on({
+            mouseenter: MouseEnter,
+            mouseleave: MouseLeave
         })
     }
     const inicializar = () => {
         $(".com-trigger").each((index, e) => {
-            let evt = $(e).data("evt")
-            if(evt === "hover") {
-                eventoHover(e)
-            }else if(evt === "click") {
-                eventoClick(e)
-            }else {
-                eventoHover(e)
+            switch($(e).data("evt")) {
+                case "hover": eventoHover(e)
+                    break;
+                case "click": eventoClick(e)
+                    break;
+                default:  
+                    eventoHover(e)
+                    return
             }
         })
 
