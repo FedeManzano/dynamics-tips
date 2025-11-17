@@ -401,6 +401,12 @@ Desde el archivo ```dropdown.scss``` podemos modificar la lista desplegable del 
 
 ## :one: Tooltips
 
+Uno de los elementos dinámicos más utilizados son los Tooltips, en la biblioteca se incluyen a través de una clase CSS 
+y un atributo ```data-tips```, luego de manera opcional podemos definir otros atributos como son: ```data-pos``` y ```data-evt``` que 
+establecen la posición y el evento disparador de la aparición del tooltips.
+
+### Ejemplo
+
 ```html
 <!DOCTYPE html>
 <html lang="es">
@@ -408,7 +414,11 @@ Desde el archivo ```dropdown.scss``` podemos modificar la lista desplegable del 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../css/dynamics.css">
+    <!-- 
+        Inclusión del archivos de estilos o por CDN como se muestra en la sección correspondiente 
+        de esta documentación
+     -->
+    <link rel="stylesheet" href="[RUTA DEL ARCHIVO]/dynamics.min.css">
 
     <style>
         .estilos {
@@ -434,8 +444,11 @@ Desde el archivo ```dropdown.scss``` podemos modificar la lista desplegable del 
     </div>
 
 
+    <!-- JQUERY se utiliza solamente para añadir el elemento dinámico que se muestra debajo -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="../dist/js/dynamics.js"></script>
+    
+    <!-- Archivo JS de la biblioteca o por CDN -->
+    <script src="[RUTA DEL ARCHIVO]/dynamics.min.js"></script>
 
     <script>
 
@@ -457,3 +470,8 @@ Desde el archivo ```dropdown.scss``` podemos modificar la lista desplegable del 
 </body>
 </html>
 ```
+### Tabla de Atributos
+
+| Attr      | Descripción |
+|---------  |-------------|
+|data-tips  | Almacena el html que se le quiere mostrar al usuario cuando aparece el tooltips |
