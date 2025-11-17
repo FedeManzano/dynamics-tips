@@ -30,13 +30,6 @@ elementos dinámicos.
 
 [Bodystyle Docs 2.0.0](https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk)
 
-## :dvd: Instalación
-
-Existen tres formas de agregar la biblioteca a los proyectos:
-1. Descarga *Descarga de los archivos procesados*.
-2. CDN *Plantilla con los enlaces CDN*.
-3. NPM *A través del gestor de paquetes de NodeJs*.
-
 ## :clipboard: Estructura
 
 - :open_file_folder: dist
@@ -55,6 +48,29 @@ Existen tres formas de agregar la biblioteca a los proyectos:
   - :pencil: _dropdown.scss
   - :pencil: _toasts.scss
   - :pencil: _general.scss
+- :open_file_folder: src
+  - :open_file_folder: modulos
+    - :open_file_folder: posicionamiento
+      - :pencil: Desplazar.js
+      - :pencil: Direccion.js
+      - :pencil: DireccionAbajo.js
+      - :pencil: DireccionDerecha.js
+      - :pencil: DireccionIzquierda.js
+      - :pencil: DireccionDerecha.js
+      - :pencil: Posicionamiento.js
+    - :pencil: ComentariosDinamicos.js
+    - :pencil: DropDown.js
+    - :pencil: Personalizado.js
+    - :pencil: Toast.js
+    - :pencil: ToolTips.js
+  - :pencil: app.js
+
+## :dvd: Instalación
+
+Existen tres formas de agregar la biblioteca a los proyectos:
+1. Descarga *Descarga de los archivos procesados*.
+2. CDN *Plantilla con los enlaces CDN*.
+3. NPM *A través del gestor de paquetes de NodeJs*.
 
 ### :arrow_down: Descarga
 
@@ -63,3 +79,43 @@ En esta sección se descargarán los archivos procesados y transpilados sin incl
 pueden obtenerse conando este mismo repositorio.
 
 [Dynamics 2.5.0]()
+
+### :link: CDN
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../dist/css/dynamics.css">
+
+    <style>
+        .estilos {
+            width: 70%;
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+
+
+    <title>Plantilla</title>
+</head>
+<body>
+    
+    <div id="test" class="estilos">
+        <h1>Plantillade prueba de Dynamics-Tips</h1>
+        <button class="com-trigger" data-info="Esto es un Comentario Derecho" data-pos="right">Derecha</button>
+        <button class="com-trigger" data-info="Esto es un Comentario Izquierdo" data-pos="left">Izquierda</button>
+        <button class="com-trigger" data-info="Esto es un Comentario Abajo" data-pos="bottom">Abajo</button>
+        <button class="com-trigger" data-info="Esto es un Comentario Arriba" data-pos="top">Arriba</button>
+        <button class="com-trigger" data-info="Esto es un Comentario Click" data-pos="top" data-evt="click">Click</button>
+    </div>
+    
+    <script src="../dist/js/dynamics.js"></script>
+</body>
+</html>
+```
