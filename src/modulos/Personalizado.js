@@ -32,21 +32,23 @@ import Direccion from "./posicionamineto/Direccion";
 
     const eventoClick = (e) => {
         comp = $("<div class='tips-complemento'>")
+        
         $("body").append(comp)
         $(e).click((e) => {
             ele = $(`<div class='${elemento}'></div>`)
+            $(ele).css("z-index",10000000 )
             origen = e.target
             $(ele).css("position", "absolute")
             $(ele).css("max-width", 270)
             $(ele).append($(e.target).data("info"))
-            $("." + elemento).remove()
+            $(ele).remove()
             $(comp).show()
 
             activar(e.target, ele)
         })
 
         $(comp).click((e) => {
-            $("."+elemento).remove()
+            $(ele).remove()
             $(".tips-complemento").hide()
             activo = false
         })
@@ -57,6 +59,7 @@ import Direccion from "./posicionamineto/Direccion";
         $(e).hover((e) => {
             origen = e.target 
             ele = $(`<div class='${elemento}'></div>`)
+            $(ele).css("z-index",10000000 )
             $(ele).append($(origen).data("info"))
             $(ele).css("position", "absolute")
             $(ele).css("max-width", 270)
@@ -78,8 +81,8 @@ import Direccion from "./posicionamineto/Direccion";
         
     }
 
-    const inicializar = ({ori="sinOrigen", ele="sinEle"}) => {
-        if(origen === "sinOrigen" || ele === "sinEle") 
+    const inicializar = ({ori="sinOrigen", ele=""}) => {
+        if(origen === "sinOrigen") 
             return
         origen = ori 
         elemento = ele 

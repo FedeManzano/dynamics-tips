@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v3.0.0-fuente/master/dist/css/bodystyle.min.css">
-    <link rel="stylesheet" href="../dist/css/estilos-dynamics.css">
+    <link  rel="stylesheet"  href="https://rawcdn.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/bodystyle.min.css">
+        
+    
+    <link rel="stylesheet" href="../css/dynamics.css">
     <title>Document</title>
 </head>
 <body>
@@ -16,26 +18,30 @@
         </div>
 
         <div class="contenedor mar-10">
-            <div  class="badge-md badge-azul tips-ele" data-pos="abajo" data-tips="Soy Un tips" data-evt="hover">Botón</div>
+            <div id="tarjeta"  class="badge-md badge-azul disparador" data-pos="abajo" data-info="" data-evt="click">Botón</div>
         </div>
     
     </div>
 
-    <div class="contenedor mar-3">
-        <div  class="tarjeta"    style="width: 18rem" >
-            <div  class="tarjeta-cuerpo com-trigger" data-pos="top" data-pos="izquierda" data-info="Shoy una tarjeta de bodystyle" data-evt="hover">
-                <h5  class="tarjeta-titulo c-negro">
-                    Titulo tarjeta
-                </h5>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur
-                    adipisicing elit.
-                    Sequi placeat aperiam porro officiis ita
-                    facilis consequatur provident.
-                </p>
-            </div>
-        </div>
-    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../dist/js/dynamics.js"></script>
+    <script>
+        DY.PerInit({ori: "disparador"})
+
+        $("#tarjeta").attr("data-info", 
+        `
+        <div  class="card"> <!-- Comienza la tarjeta simple -->
+            <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
+                <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
+                <small>Pequeña descripción</small>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
+                </p> 
+                <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
+            </div><!-- FIN Tarjeta oscura -->
+        </div>
+        `)
+    </script>
 </body>
 </html>
