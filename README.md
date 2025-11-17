@@ -143,6 +143,14 @@ se ingresan dinámicamente a través de JS, es necesario inicializar los módulo
 Todos los elementos dinámicos bienen con estilos predefinidos, los cuales pueden ser modificados para poder ajustrlos a nuestras 
 necesidades, desde el código fuente podemos clonar el repositorio, de manera tal de disponer de los archivos ```SASS```.
 
+```shell
+git clone https://github.com/FedeManzano/dynamics-tips
+```
+
+```shell
+sass -s compressed sass/dynamics.scss dist/css/dinamics.css
+```
+
 #### ToolTips 
 
 Desde el archivo ```sass/_tips.scss``` podemos modificar algunas propiedades que permitirán ajustar los estilos y utlizar los elementos dinámicos adaptados al sitio o app en desarrollo.
@@ -280,6 +288,57 @@ $fz: 14px;
     overflow: visible !important;
 }
 ```
+
+#### Dropdown
+
+Desde el archivo ```dropdown.scss``` podemos modificar la lista desplegable del dropdown.
+
+```sass
+
+
+.dropdown-toggle {
+    z-index: 10000000;
+    position: relative;
+    padding-right: 20px !important;
+}
+
+.dropdown-toggle .f-abajo {
+    position: absolute; 
+}
+
+.dropdown {
+    position: absolute;
+    background-color: white !important;
+    border: 1px solid rgba(0, 0, 0, 0.123);
+    min-width: 150px;
+    height: fit-content;
+    overflow: hidden;
+    border-radius: 4px;
+    transform: translate(0);
+    transition: transform 0.3s;
+
+    ul {
+        list-style: none !important;
+        padding: 0px !important;
+        margin: 0px !important;
+        a {
+            display: block;
+            width: 100%;
+            color: black;
+            text-decoration: none;
+            padding: 5px;
+            white-space: nowrap;
+            margin: 0px !important;
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.068);
+            }
+        }
+    }
+}
+
+```
+
+
 
 ### Tooltips
 
