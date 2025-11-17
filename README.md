@@ -36,3 +36,11 @@ Existen tres formas de agregar la biblioteca a los proyectos:
 1. Descarga *Descarga de los archivos procesados*.
 2. CDN *Plantilla con los enlaces CDN*.
 3. NPM *A través del gestor de paquetes de NodeJs*.
+
+### :arrow_down: Descarga
+
+La primera forma es la descarga y la incorporación de los archivos JS y CSS al proyecto en desarrollo. <br>
+En esta sección se descargarán los archivos procesados y transpilados sin incluir los archivos con el código fuente, los cuales 
+pueden obtenerse conando este mismo repositorio.
+
+[Dynamics 2.5.0]()
