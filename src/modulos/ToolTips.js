@@ -52,28 +52,67 @@ import Direccion from "./posicionamineto/Direccion";
      */
     const realizarAparicion = (origen, ele) => {
         let pos = $(origen).data("pos")
+
+        // Método que utliza el núcleo de posicionamiento
+        // para ublicar de manera correcta el elemento
         Direccion.posicionar(pos, origen, ele, true)
         activo = true
     }
 
+    /**
+     * Añade el elemento dinámico al body de 
+     * la página.
+     * @param {Elemento de origen} origen 
+     * @param {Elemento dinámico a agregar} ele 
+     */
     const activar = (origen, ele) => {
         $("body").append(ele)
         realizarAparicion(origen, ele)
     }
 
 
+    /**
+     * Función que gestiona el evento click del usuario
+     * @param {Elemento origen que desencadena el evento} e 
+     */
     const eventoClick = (e) => {
+
+        // Complemento que permite desaparecer el elemento 
+        // dinámico presionando en cualquier parte 
+        // de la pantalla
         comp = $("<div class='tips-complemento'>")
+
+        // Añade el complemento al DOM
         $("body").append(comp)
-        $(e).click((e) => {
+
+        /**
+         * Evento click al elemento origen
+         */        
+        $(e).on("click",(e) => {
+            // Primero remueve todos los tips
+            // limpia la pantalla 
             $(".tips").remove()
+
+            // Asigna al objeto origen el disparador del evento
             origen = e.target 
+
+            // crea tips y le añade el contenidof del data-tips del
+            // orgen
             ele = $("<div class='tips'></div>")
             $(ele).append($(origen).data("tips"))
+
+            // Apararece el complemento
+            // para poder desaparecer al elemento
             $(comp).show()
+
+            // Aparece el elemento dinámico en pantalla
             activar(origen, ele)
         })
         
+        /**
+         * Cuando se hace click en el 
+         * complemento desaparece el tooltips
+         */
         $(comp).on("click",(e) => {
             $(".tips").remove()
             $(".tips-complemento").hide()

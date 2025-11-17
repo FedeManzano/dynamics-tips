@@ -1,3 +1,8 @@
+/*!
+ * Dynamics-Tips 2.5.0
+ * Repositorio: https://github.com/FedeManzano/dynamics-tips
+ * @author: Federico Manzano
+ */
 .tips,
 .com-dinamico,
 .dropdown,
@@ -11,7 +16,8 @@
 }
 
 .tips-complemento,
-.com-complemento {
+.com-complemento,
+.drop-complemento {
   position: fixed;
   bottom: 0;
   top: 0;
@@ -22,7 +28,7 @@
 }
 
 /**
-
+    Estilos de para los Tooltips
 */
 .tips {
   display: flex !important;
@@ -73,6 +79,24 @@
 .tips-ele {
   z-index: 0;
   position: relative;
+  overflow: visible !important;
+}
+
+.com-dinamico {
+  position: absolute !important;
+  background-color: rgb(255, 255, 255);
+  max-width: 270px !important;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.295);
+  color: rgb(48, 48, 48);
+  line-height: 20px;
+  transform: translate(0);
+  transition: transform 0.3s;
+}
+
+.com-trigger {
   overflow: visible !important;
 }
 
