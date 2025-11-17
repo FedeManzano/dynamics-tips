@@ -2,6 +2,7 @@
  * Dynamics-Tips 2.5.0
  * Repositorio: https://github.com/FedeManzano/dynamics-tips
  * @author: Federico Manzano
+ * Licencia MIT
  */
 import ToolTips from "./modulos/ToolTips";
 import ComentarioDinamico from "./modulos/ComentariosDinamicos"
@@ -46,32 +47,56 @@ import Personalizado from "./modulos/Personalizado"
         Dropdown.destroy()
     }
 
+    /**
+     * Permite inicializar los comentarios
+     */
     const CommentsInit = () => {
         ComentarioDinamico.destroy()
         ComentarioDinamico.iniciar()
     }
 
+    /**
+     * Permite destruir los comentarios
+     */
     const CommentsDestroy = () => {
         ComentarioDinamico.destroy()
     }
 
+    /**
+     * Permite inicializar los tooltips
+     */
     const ToolTipsInit = () => {
         ToolTips.destroy()
         ToolTips.iniciar()
     }
 
+    /**
+     * Permite destruir los tooltips
+     */
     const ToolTipsDestroy = () => {
         ToolTips.destroy()
     }
 
+    /**
+     * Permite inicializar los tips personalizados
+     * @param {ori: clase del disprador, ele: clase del obj dinámico} conf 
+     */
     const PersonalizadoInit = (conf) => {
         Personalizado.iniciar(conf)
     }
 
+    /**
+     * Permite destruir los tips Personalizados
+     */
     const PersonalizadoDestroy = () => {
         Personalizado.destroy()
     }
 
+
+    /**
+     * DY es el objeto JSON que brina acceso a 
+     * todas las funcionalidades de esta biblioteca.
+     */
     const DY = {
         Toast: (conf) => Ts(conf),
         PerInit: (config) => PersonalizadoInit(config),

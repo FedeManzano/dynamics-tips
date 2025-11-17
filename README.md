@@ -37,6 +37,25 @@ Existen tres formas de agregar la biblioteca a los proyectos:
 2. CDN *Plantilla con los enlaces CDN*.
 3. NPM *A través del gestor de paquetes de NodeJs*.
 
+## :clipboard: Estructura
+
+- :open_file_folder: dist
+  - :open_file_folder: css
+    - :pencil: dynamics.css
+    - :pencil: dynamics.min.css
+  - :open_file_folder: js
+    - :pencil: dynamics.min.js
+    - :pencil: dynamics.js
+- :open_file_folder: logo
+  - :pencil: logo.png
+- :open_file_folder: sass
+  - :pencil: dynamics.scss
+  - :pencil: _tips.scss
+  - :pencil: _comments.scss
+  - :pencil: _dropdown.scss
+  - :pencil: _toasts.scss
+  - :pencil: _general.scss
+
 ### :arrow_down: Descarga
 
 La primera forma es la descarga y la incorporación de los archivos JS y CSS al proyecto en desarrollo. <br>
