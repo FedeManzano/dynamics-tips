@@ -57,7 +57,7 @@
   border-bottom: 5px solid transparent !important;
   border-right: 5px solid rgba(0, 0, 0, 0.863) !important;
   top: calc(50% - 4.5px) !important;
-  left: -4.5px !important;
+  left: -4px !important;
 }
 .tips .mueca-arr {
   position: absolute;

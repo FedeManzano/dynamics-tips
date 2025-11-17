@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/dynamics.css">
+
+    <style>
+        .estilos {
+            width: 70%;
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+
+
+    <title>Plantilla de Pruebas</title>
+</head>
+<body>
+    
+    <div id="test" class="estilos">
+        <button class="com-trigger" data-info="Esto es un Comentario Derecho" data-pos="right">Derecha</button>
+        <button class="com-trigger" data-info="Esto es un Comentario Izquierdo" data-pos="left">Izquierda</button>
+        <button class="com-trigger" data-info="Esto es un Comentario Abajo" data-pos="bottom">Abajo</button>
+        <button class="com-trigger" data-info="Esto es un Comentario Arriba" data-pos="top">Arriba</button>
+        <button class="com-trigger" data-info="Esto es un Comentario Click" data-pos="top" data-evt="click">Click</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../dist/js/dynamics.js"></script>
+
+    <script>
+        window.onload = () => {
+            setTimeout( () => {
+                DY.CommentsInit()
+            }, 100)
+        }
+
+        $("#test").append(`<button class='com-trigger' data-info='Esto es un botón dinámico'>Dinámico</button>`)
+    </script>
+</body>
+</html>

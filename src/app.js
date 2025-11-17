@@ -20,13 +20,51 @@ import Personalizado from "./modulos/Personalizado"
         Toast.toast(conf)
     }
 
+    const DropdownInit = () => {
+        Dropdown.destroy()
+        Dropdown.iniciar()
+    }
+
+    const DropdownDestroy = () => {
+        Dropdown.destroy()
+    }
+
+    const CommentsInit = () => {
+        ComentarioDinamico.destroy()
+        ComentarioDinamico.iniciar()
+    }
+
+    const CommentsDestroy = () => {
+        ComentarioDinamico.destroy()
+    }
+
+    const ToolTipsInit = () => {
+        ToolTips.destroy()
+        ToolTips.iniciar()
+    }
+
+    const ToolTipsDestroy = () => {
+        ToolTips.destroy()
+    }
+
     const PersonalizadoInit = (conf) => {
         Personalizado.iniciar(conf)
     }
 
+    const PersonalizadoDestroy = () => {
+        Personalizado.destroy()
+    }
+
     const DY = {
         Toast: (conf) => Ts(conf),
-        PerInit: (config) => PersonalizadoInit(config)
+        PerInit: (config) => PersonalizadoInit(config),
+        PerDestroy: () => PersonalizadoDestroy(),
+        ToolTipsInit: () => ToolTipsInit(),
+        ToolTipsDestroy: () => ToolTipsDestroy(),
+        CommentsInit: () => CommentsInit(),
+        CommentsDestroy: () => CommentsDestroy(),
+        DropdownInit: () =>  DropdownInit(),
+        DropdownDestroy: () => DropdownDestroy()
     }
     window.DY = DY
 })()

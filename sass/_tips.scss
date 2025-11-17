@@ -41,7 +41,7 @@ $tam-flecha: 5px;
         border-bottom: $tam-flecha solid transparent !important;
         border-right: $tam-flecha solid  $bg !important;
         top: calc(50% - 4.5px) !important;
-        left: -4.5px !important;
+        left: -4px !important;
     }    
 
     @mixin flecha_abajo () {
