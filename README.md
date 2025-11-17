@@ -21,6 +21,7 @@ y reutilización del código se define por separado aumentando su disponibilidad
 - [Comentarios](https://bodystyle.webcindario.com/paginas/comentarios.html) 
 - [Dropdown](https://bodystyle.webcindario.com/paginas/dropdown.html) 
 - [TipsPropios](https://bodystyle.webcindario.com/paginas/personalizados.html) 
+- [Toast](https://bodystyle.webcindario.com/paginas/toast.html) 
 
 ### :arrow_down: Descarga
 

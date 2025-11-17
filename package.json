@@ -1,16 +1,17 @@
 {
   "name": "dynamics-tips",
   "version": "2.5.0",
-  "description": "Objetos dinamicos que se añaden debido a eventos del usuario.",
+  "description": "Objetos dinámicos que se añaden debido a eventos del usuario.",
   "keywords": [
     "tips",
     "tooltips",
     "dinamicos",
-    "comentarios"
+    "comentarios",
+    "toast"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FedericoManzano/dynamics-tips-v1.0.0.git"
+    "url": "git+https://github.com/FedeManzano/dynamics-tips"
   },
   "license": "MIT",
   "author": "Federico Manzano",
@@ -24,7 +25,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack"
+    "build": "webpack"
   },
   "dependencies": {
     "jquery": "^3.5.1"
