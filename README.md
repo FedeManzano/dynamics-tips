@@ -25,7 +25,14 @@ y reutilización del código se define por separado aumentando su disponibilidad
 
 ### :arrow_down: Descarga
 
-Se puede descargar la documentación de Bodystyle la cual incluye toda la información necesaria para poder utilizar los 
+Se puede descargar la documentación de **Bodystyle** la cual incluye toda la información necesaria para poder utilizar los 
 elementos dinámicos.
 
 [Bodystyle Docs 2.0.0](https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk)
+
+## :dvd: Instalación
+
+Existen tres formas de agregar la biblioteca a los proyectos:
+1. Descarga *Descarga de los archivos procesados*.
+2. CDN *Plantilla con los enlaces CDN*.
+3. NPM *A través del gestor de paquetes de NodeJs*.
