@@ -9,9 +9,10 @@
 [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-purple)](https://github.com/FedeManzano/bodystyle/blob/master/LICENSE)
 [![VERSION](https://img.shields.io/badge/VERSION-2.5.0-red)](https://github.com/FedeManzano/bodystyle/releases/tag/v4.8.0)
 
-Elementos que se incorporan de manera dinámica que le permiten al usuario disponer de información sobre determinados elementos dentro del DOM. <br>
-Es una dependencia de [Bodystyle](https://github.com/FedeManzano/bodystyle) que conforma el núcleo de esta biblioteca permitiendo posicional 
-todos los elementos dinámicos. Para la mejor comprención de las utilidades proveistas se recomiento ver la documentación de Bodystyle que presenta cada uno de los elementos explicados con claridad. 
+Componentes que se incorporan de manera dinámica que le permiten al usuario disponer de información sobre determinados elementos dentro del DOM. <br>
+Esta biblioteca se creó con el fin de disponer de las funcionalidades que permitan posicionar todos los elementos dinámicos informativos de[Bodystyle](https://github.com/FedeManzano/bodystyle) una biblioteca dedicada al desarrollo del FrontEnd y que por razones de modularización 
+y reutilización del código se define por separado aumentando la disponibilidad.
+ 
 
 - [ToolTips](https://bodystyle.webcindario.com/paginas/tooltips.html) 
 - [Comentarios](https://bodystyle.webcindario.com/paginas/comentarios.html) 
