@@ -100,4 +100,43 @@
   overflow: visible !important;
 }
 
+.dropdown-toggle {
+  z-index: 10000000;
+  position: relative;
+  padding-right: 20px !important;
+}
+
+.dropdown-toggle .f-abajo {
+  position: absolute;
+}
+
+.dropdown {
+  position: absolute;
+  background-color: white !important;
+  border: 1px solid rgba(0, 0, 0, 0.123);
+  min-width: 150px;
+  height: fit-content;
+  overflow: hidden;
+  border-radius: 4px;
+  transform: translate(0);
+  transition: transform 0.3s;
+}
+.dropdown ul {
+  list-style: none !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.dropdown ul a {
+  display: block;
+  width: 100%;
+  color: black;
+  text-decoration: none;
+  padding: 5px;
+  white-space: nowrap;
+  margin: 0px !important;
+}
+.dropdown ul a:hover {
+  background-color: rgba(0, 0, 0, 0.068);
+}
+
 /*# sourceMappingURL=dynamics.css.map */

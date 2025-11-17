@@ -29,12 +29,11 @@ import Direccion from "./posicionamineto/Direccion";
     }
 
     const eventoClick = (e) => {
-        $(e).click((e) =>{
+        $(e).on("click",(e) =>{
             if(press) {
                 $(comp).hide()
                 $(".dropdown").hide()
                 press = false
-                return 
             }
             activar(e)
         })
@@ -120,6 +119,7 @@ import Direccion from "./posicionamineto/Direccion";
     const destroy = () => {
         $(".dropdown-toggle").off()
         $(".drop-complemento").off()
+        $(".f-abajo").remove()
         comp  = null
         press = false
         elemento = null

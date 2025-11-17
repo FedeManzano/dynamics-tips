@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/dynamics.css">
+
+    <style>
+        .estilos {
+            width: 70%;
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+
+
+    <title>Plantilla de Pruebas</title>
+</head>
+<body>
+    
+    <div id="test" class="estilos">
+        <button class="dropdown-toggle" data-target="#list" data-pos="right" data-color="#000" data-evt="hover">Derecha</button>
+        <button class="dropdown-toggle" data-target="#list" data-pos="left">Izquierda</button>
+        <button class="dropdown-toggle" data-target="#list" data-pos="bottom">Abajo</button>
+        <button class="dropdown-toggle" data-target="#list" data-pos="top">Arriba</button>
+        <button class="dropdown-toggle" data-target="#list" data-pos="right">Click</button>
+    </div>
+
+    <div class="dropdown" id="list">
+        <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+            <li><a href="#">Item 4</a></li>
+            <li><a href="#">Item 5</a></li>
+        </ul>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../dist/js/dynamics.js"></script>
+
+    <script>
+        window.onload = () => {
+            setTimeout( () => {
+                DY.DropdownInit()
+            }, 100)
+        }
+
+        $("#test").append(`<button class="dropdown-toggle" data-target="#list" data-pos="right">Dinámico</button>`)
+    </script>
+</body>
+</html>

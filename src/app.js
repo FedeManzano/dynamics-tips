@@ -16,15 +16,32 @@ import Personalizado from "./modulos/Personalizado"
     ComentarioDinamico.iniciar() // Inicializa los comentarios de manera automática
     Dropdown.iniciar() // Inicializa los dropdown de manera automática
 
+    /**
+     * Muestra el toast en pantalla con el efecto
+     * correspondiente.
+     * El objeto JSON conf se compone por
+     * html: [html] código html a mostrar
+     * clases[]: [string] clases CSS que se le asignan al toast
+     * tiempo: [int] tiempo en ms de duración en pantalla
+     * cierre: [bool] posibilidad de cerrar el toast manualmente
+     * @param {Configuración del Toast} conf 
+     */
     const Ts = (conf) => {
         Toast.toast(conf)
     }
 
+    /**
+     * Permite inicializar el dropdown
+     * manualmente.
+     */
     const DropdownInit = () => {
         Dropdown.destroy()
         Dropdown.iniciar()
     }
 
+    /**
+     * Permite destruir los dropdown
+     */
     const DropdownDestroy = () => {
         Dropdown.destroy()
     }
