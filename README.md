@@ -477,3 +477,13 @@ establecen la posición y el evento disparador de la aparición del tooltips.
 |data-tips  | Almacena el html que se le quiere mostrar al usuario cuando aparece el tooltips                 |
 |data-pos   | Posición donde se pretende que aparezca (TOP / LEFT / RIGHT / BOTTOM) Default: bottom           |
 |data-evt   | Evento disparador (click | hover) por defecto (hover)                                           |
+
+> Para ver más ejemplos [Ver Docs](https://bodystyle.webcindario.com/paginas/tooltips.html)
+
+## :two: Comentarios
+
+Elementos similares a los tooltips con la diferencia que permiten cargar más html para mostrarle al usuario sin romper 
+ningún flujo dentro de la página, se utilizan cuando la información a mostrar es mucha, por esta razón en determinadas oportunidades
+son preferibles ante los Tooltips.
+
+### Ejemplo
