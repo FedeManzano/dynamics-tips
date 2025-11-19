@@ -660,4 +660,4 @@ es la clase que se asignará al elemento dinámico personalizado de esta secció
 
 > Para ver más ejemplos [Ver Docs](https://bodystyle.webcindario.com/paginas/personalizado.html)
 
-## Autor [Federico Manzano](https://github.com/FedeManzano)
+#### Autor [Federico Manzano](https://github.com/FedeManzano)
