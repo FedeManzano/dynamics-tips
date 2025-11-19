@@ -487,3 +487,147 @@ ningún flujo dentro de la página, se utilizan cuando la información a mostrar
 son preferibles ante los Tooltips.
 
 ### Ejemplo
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="[RUTA_ARCH_CSS]/dynamics.css">
+
+    <style>
+        .estilos {
+            width: 70%;
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+
+
+    <title>Comentarios</title>
+</head>
+<body>
+    
+    <div id="test" class="estilos">
+        <!-- Se utiliza la clase com-trigger -->
+        <button class="com-trigger" data-info="Esto es un Comentario Derecho" data-pos="right">Derecha</button>
+        <button class="com-trigger" data-info="Esto es un Comentario Izquierdo" data-pos="left">Izquierda</button>
+        <button class="com-trigger" data-info="Esto es un Comentario Abajo" data-pos="bottom">Abajo</button>
+        <button class="com-trigger" data-info="Esto es un Comentario Arriba" data-pos="top">Arriba</button>
+        <button class="com-trigger" data-info="Esto es un Comentario Click" data-pos="top" data-evt="click">Click</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="[RUTA_ARCH_JS]/dynamics.js"></script>
+
+    <script>
+        window.onload = () => {
+            setTimeout( () => {
+                // Se inicializa el módulo
+                // porque hay un elemento dinámico
+                DY.CommentsInit()
+            }, 100)
+        }
+
+        // Elemento dinámico para la muestra del funcionamiento.
+        $("#test").append(`<button class='com-trigger' data-info='Esto es un botón dinámico'>Dinámico</button>`)
+    </script>
+</body>
+</html>
+```
+
+| Attr      | Descripción |
+|---------  |-------------|
+|data-info  | Almacena el html que se le quiere mostrar al usuario cuando aparece el comentario               |
+|data-pos   | Posición donde se pretende que aparezca (TOP / LEFT / RIGHT / BOTTOM) Default: bottom           |
+|data-evt   | Evento disparador (click | hover) por defecto (hover)                                           |
+
+> Para ver más ejemplos [Ver Docs](https://bodystyle.webcindario.com/paginas/comentarios.html)
+
+## :three: Dropdown
+
+Este elemento es una lista que se muestra cuando el usuario pasa el cursor por un elemento o hace click en el mismo. 
+La lista se vincula con el elemento disparador a través de su ID y el atributo del data-target del elemento disparador por ej: un botón.
+
+### Ejemplo
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Archivo dynamics.min.css ya sea fisicamente o a través de su CDN -->
+    <link rel="stylesheet" href="[RUTA_CSS]/dynamics.css">
+
+    <style>
+        .estilos {
+            width: 70%;
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+
+
+    <title>Dropdown</title>
+</head>
+<body>
+    
+    <div id="test" class="estilos">
+        <!--
+            DISPARADORES, todos tienen la clase .dropdown-toggle y apuntan a través del data-target al ID de la 
+            lista que está debajo.
+        -->
+        <button class="dropdown-toggle" data-target="#list" data-pos="right" data-color="#000" data-evt="hover">Derecha</button>
+        <button class="dropdown-toggle" data-target="#list" data-pos="left">Izquierda</button>
+        <button class="dropdown-toggle" data-target="#list" data-pos="bottom">Abajo</button>
+        <button class="dropdown-toggle" data-target="#list" data-pos="top">Arriba</button>
+        <button class="dropdown-toggle" data-target="#list" data-pos="right">Click</button>
+    </div>
+
+    <!--Lista desplegable que posee la clase .dropdown y el ID #list -->
+    <div class="dropdown" id="list">
+        <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+            <li><a href="#">Item 4</a></li>
+            <li><a href="#">Item 5</a></li>
+        </ul>
+    </div>
+
+    <!--JQUERY solo se agrega para agregar el botón dinámico que esta definido abajo-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="[RUTA_JS]/dynamics.js"></script>
+
+    <script>
+        window.onload = () => {
+            setTimeout( () => {
+                // Inicialización
+                DY.DropdownInit()
+            }, 100)
+        }
+
+        // Elemento dinámico que dispara el evento
+        $("#test").append(`<button class="dropdown-toggle" data-target="#list" data-pos="right">Dinámico</button>`)
+    </script>
+</body>
+</html>
+```
+
+| Attr          | Descripción |
+|---------      |-------------|
+|data-target    | Apunta al ID de la lista .dropdown a desplegar                                                  |
+|data-pos       | Posición donde se pretende que aparezca (TOP / LEFT / RIGHT / BOTTOM) Default: bottom           |
+|data-evt       | Evento disparador (click | hover) por defecto (click)                                           |
+|data-color     | Color de la flecha decorativa que acompaña al elemento disparador.                              |
+
+> Para ver más ejemplos [Ver Docs](https://bodystyle.webcindario.com/paginas/dripdown.html)
+
+## :four: Toast
