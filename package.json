@@ -1,6 +1,6 @@
 {
   "name": "dytips",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "Objetos dinámicos que se añaden debido a eventos del usuario.",
   "keywords": [
     "tips",
@@ -18,7 +18,7 @@
   "main": "app.js",
   "files": [
     "dist/{css,js}/*.{css,js,map}",
-    "sass/*.{scss}",
+    "sass/**/*.scss",
     "src/{modulos}/**/*.{js}",
     "src/**/*.js",
     "css/**/*.css"

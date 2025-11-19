@@ -658,6 +658,6 @@ es necesario inicializar el módulo con un objeto JSON con dos atributos (ori y 
 CSS asignada al elemento disparador, la misma puede ser cualesquiera definida por el desarrollador, el segundo (ele) 
 es la clase que se asignará al elemento dinámico personalizado de esta sección.
 
-> Para ver más ejemplos [Ver Docs](https://bodystyle.webcindario.com/paginas/personalizado.html)
+> Para ver más ejemplos [Ver Docs](https://bodystyle.webcindario.com/paginas/personalizados.html)
 
 #### Autor [Federico Manzano](https://github.com/FedeManzano)
