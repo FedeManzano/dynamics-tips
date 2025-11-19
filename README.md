@@ -628,6 +628,25 @@ La lista se vincula con el elemento disparador a través de su ID y el atributo 
 |data-evt       | Evento disparador (click | hover) por defecto (click)                                           |
 |data-color     | Color de la flecha decorativa que acompaña al elemento disparador.                              |
 
-> Para ver más ejemplos [Ver Docs](https://bodystyle.webcindario.com/paginas/dripdown.html)
+> Para ver más ejemplos [Ver Docs](https://bodystyle.webcindario.com/paginas/dropdown.html)
 
-## :four: Toast
+## :four: Toasts
+
+Elemento dinámico que muestra un mensaje a partir de un evento disparador, el mismo aparece desde un altura
+determinada y sube hasta llegar al inicio de la pantalla.
+
+```js
+let conf = {
+    html: "<p class='parrafo' style='color: white;'>Esto es un Toast<p>", // HTML a mostrar
+    clases [
+        "clase_1",
+        "clase_2",
+        "clase_3"
+    ],
+    timepo: 3000, // timepo (MS) que dura el toast en pantalla
+    cerrar: false // Darle la oportunidad al usuario para que cierre el toast
+}
+DY.Toast(conf) // esto muestra el toast
+```
+
+> Para ver más ejemplos [Ver Docs](https://bodystyle.webcindario.com/paginas/toasts.html)
