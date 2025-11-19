@@ -643,10 +643,21 @@ let conf = {
         "clase_2",
         "clase_3"
     ],
-    timepo: 3000, // timepo (MS) que dura el toast en pantalla
+    tiempo: 3000, // tiempo (MS) que dura el toast en pantalla
     cerrar: false // Darle la oportunidad al usuario para que cierre el toast
 }
 DY.Toast(conf) // esto muestra el toast
 ```
 
-> Para ver más ejemplos [Ver Docs](https://bodystyle.webcindario.com/paginas/toasts.html)
+> Para ver más ejemplos [Ver Docs](https://bodystyle.webcindario.com/paginas/toast.html)
+
+## :five: Tips Personalizados
+
+Es posible definir eventos personalizados y mostrarlos como lo vimos con los comentarios y los tips, en este caso 
+es necesario inicializar el módulo con un objeto JSON con dos atributos (ori y ele) en el caso del primero es la clase 
+CSS asignada al elemento disparador, la misma puede ser cualesquiera definida por el desarrollador, el segundo (ele) 
+es la clase que se asignará al elemento dinámico personalizado de esta sección.
+
+> Para ver más ejemplos [Ver Docs](https://bodystyle.webcindario.com/paginas/personalizado.html)
+
+## Autor [Federico Manzano](https://github.com/FedeManzano)
