@@ -7,7 +7,7 @@
 [![MEGA](https://img.shields.io/badge/MEGA-Download-green)](https://mega.nz/file/kFFGAT4T#hCPWpJDciRYSmvtML8wnv1ZZ_rxX62ozvP5EjPWnKRY)
 [![NPM](https://img.shields.io/badge/NPM-dytips-orange)](https://www.npmjs.com/package/dytips)
 [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-purple)](https://github.com/FedeManzano/dynamics-tips/blob/master/LICENSE)
-[![VERSION](https://img.shields.io/badge/VERSION-2.5.0-red)](https://github.com/FedeManzano/bodystyle/releases/tag/v4.8.0)
+[![VERSION](https://img.shields.io/badge/VERSION-2.5.0-red)](https://github.com/FedeManzano/dynamics-tips/tags)
 
 Componentes que se incorporan de manera dinámica que le permiten al usuario disponer de información sobre determinados elementos dentro del DOM. <br>
 Esta biblioteca se creó con el fin de disponer de las funcionalidades que permitan posicionar todos los elementos dinámicos informativos de   [Bodystyle](https://github.com/FedeManzano/bodystyle) una biblioteca dedicada al desarrollo del FrontEnd y que por razones de modularización 
@@ -89,7 +89,7 @@ pueden obtenerse clonando este mismo repositorio.
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../dist/css/dynamics.css">
+    <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/dynamics-tips/refs/heads/master/dist/css/dynamics.min.css">
 
     <style>
         .estilos {
@@ -115,7 +115,7 @@ pueden obtenerse clonando este mismo repositorio.
         <button class="com-trigger" data-info="Esto es un Comentario Click" data-pos="top" data-evt="click">Click</button>
     </div>
     
-    <script src="../dist/js/dynamics.js"></script>
+    <script src="https://rawcdn.githack.com/FedeManzano/dynamics-tips/refs/heads/master/dist/js/dynamics.min.js"></script>
 </body>
 </html>
 ```
