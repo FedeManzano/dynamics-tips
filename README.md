@@ -1,86 +1,82 @@
-
 <p align="center">
-  <img src="./logo/logo.png" width="200px" />
+  <img src="./logo/logo.png" width="200px" alt="Dynamics Tips Logo" />
 </p>
 
-# :dvd: Dynamics Tips 
-[![MEGA](https://img.shields.io/badge/MEGA-Download-green)](https://mega.nz/file/kFFGAT4T#hCPWpJDciRYSmvtML8wnv1ZZ_rxX62ozvP5EjPWnKRY)
-[![NPM](https://img.shields.io/badge/NPM-dytips-orange)](https://www.npmjs.com/package/dytips)
-[![LICENSE](https://img.shields.io/badge/LICENSE-MIT-purple)](https://github.com/FedeManzano/dynamics-tips/blob/master/LICENSE)
-[![VERSION](https://img.shields.io/badge/VERSION-2.5.0-red)](https://github.com/FedeManzano/dynamics-tips/tags)
+<h1 align="center">Dynamics Tips</h1>
 
-Componentes que se incorporan de manera dinámica que le permiten al usuario disponer de información sobre determinados elementos dentro del DOM. <br>
-Esta biblioteca se creó con el fin de disponer de las funcionalidades que permitan posicionar todos los elementos dinámicos informativos de   [Bodystyle](https://github.com/FedeManzano/bodystyle) una biblioteca dedicada al desarrollo del FrontEnd y que por razones de modularización 
-y reutilización del código se define por separado aumentando su disponibilidad.
- 
-## :green_book: Documentación
+<p align="center">
+  <strong>Componentes dinámicos modernos para interfaces web interactivas</strong>
+</p>
 
-### :link: Enlaces 
+<p align="center">
+  <a href="https://www.npmjs.com/package/dytips"><img src="https://img.shields.io/npm/v/dytips?color=orange&label=npm" alt="NPM Version"></a>
+  <a href="https://github.com/FedeManzano/dynamics-tips/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-purple" alt="License MIT"></a>
+  <a href="https://github.com/FedeManzano/dynamics-tips/releases"><img src="https://img.shields.io/badge/version-2.5.2-red" alt="Version"></a>
+  <a href="https://mega.nz/file/kFFGAT4T#hCPWpJDciRYSmvtML8wnv1ZZ_rxX62ozvP5EjPWnKRY"><img src="https://img.shields.io/badge/download-MEGA-green" alt="Download"></a>
+</p>
 
-- [ToolTips](https://bodystyle.webcindario.com/paginas/tooltips.html) 
-- [Comentarios](https://bodystyle.webcindario.com/paginas/comentarios.html) 
-- [Dropdown](https://bodystyle.webcindario.com/paginas/dropdown.html) 
-- [TipsPropios](https://bodystyle.webcindario.com/paginas/personalizados.html) 
-- [Toast](https://bodystyle.webcindario.com/paginas/toast.html) 
+<p align="center">
+  <a href="#-características">Características</a> •
+  <a href="#-instalación">Instalación</a> •
+  <a href="#-inicio-rápido">Inicio Rápido</a> •
+  <a href="#-componentes">Componentes</a> •
+  <a href="#-documentación">Documentación</a> •
+  <a href="#-licencia">Licencia</a>
+</p>
 
-### :arrow_down: Descarga
+---
 
-Se puede descargar la documentación de **Bodystyle** la cual incluye toda la información necesaria para poder utilizar los 
-elementos dinámicos.
+## 📖 Descripción
 
-[Bodystyle Docs 2.0.0](https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk)
+**Dynamics Tips** es una biblioteca JavaScript ligera y modular que proporciona componentes dinámicos interactivos para aplicaciones web. Originalmente desarrollada como parte del ecosistema [Bodystyle](https://github.com/FedeManzano/bodystyle), se separó para ofrecer mayor modularidad y reutilización.
 
-## :clipboard: Estructura
+### ¿Por qué Dynamics Tips?
 
-- :open_file_folder: dist
-  - :open_file_folder: css
-    - :pencil: dynamics.css
-    - :pencil: dynamics.min.css
-  - :open_file_folder: js
-    - :pencil: dynamics.min.js
-    - :pencil: dynamics.js
-- :open_file_folder: logo
-  - :pencil: logo.png
-- :open_file_folder: sass
-  - :pencil: dynamics.scss
-  - :pencil: _tips.scss
-  - :pencil: _comments.scss
-  - :pencil: _dropdown.scss
-  - :pencil: _toasts.scss
-  - :pencil: _general.scss
-- :open_file_folder: src
-  - :open_file_folder: modulos
-    - :open_file_folder: posicionamiento
-      - :pencil: Desplazar.js
-      - :pencil: Direccion.js
-      - :pencil: DireccionAbajo.js
-      - :pencil: DireccionDerecha.js
-      - :pencil: DireccionIzquierda.js
-      - :pencil: DireccionDerecha.js
-      - :pencil: Posicionamiento.js
-    - :pencil: ComentariosDinamicos.js
-    - :pencil: DropDown.js
-    - :pencil: Personalizado.js
-    - :pencil: Toast.js
-    - :pencil: ToolTips.js
-  - :pencil: app.js
+- ✅ **Ligera y Rápida** - Código optimizado y minificado
+- ✅ **Fácil de Usar** - API simple basada en data attributes
+- ✅ **Personalizable** - Variables SASS para adaptar a tu diseño
+- ✅ **Modular** - Importa solo lo que necesitas
+- ✅ **Bien Documentada** - Ejemplos claros y documentación completa
 
-## :dvd: Instalación
+---
 
-Existen tres formas de agregar la biblioteca a los proyectos:
-1. Descarga *Descarga de los archivos procesados*.
-2. CDN *Plantilla con los enlaces CDN*.
-3. NPM *A través del gestor de paquetes de NodeJs*.
+## ✨ Características
 
-### :arrow_down: Descarga
+- 🎯 **ToolTips** - Información contextual al pasar el cursor
+- 💬 **Comentarios** - Cuadros de información expandidos
+- 📋 **Dropdown** - Listas desplegables personalizables
+- 🔔 **Toast** - Notificaciones temporales elegantes
+- 🎨 **Personalizable** - Crea tus propios componentes dinámicos
 
-La primera forma es la descarga y la incorporación de los archivos JS y CSS al proyecto en desarrollo. <br>
-En esta sección se descargarán los archivos procesados y transpilados sin incluir los archivos con el código fuente, los cuales 
-pueden obtenerse clonando este mismo repositorio.
+---
 
-[Dynamics 2.5.0](https://mega.nz/file/kFFGAT4T#hCPWpJDciRYSmvtML8wnv1ZZ_rxX62ozvP5EjPWnKRY)
+## 📦 Instalación
 
-### :link: CDN
+### NPM (Recomendado)
+
+```bash
+npm install dytips
+```
+
+### CDN
+
+```html
+<!-- CSS -->
+<link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/dynamics-tips/refs/heads/master/dist/css/dynamics.min.css">
+
+<!-- JavaScript -->
+<script src="https://rawcdn.githack.com/FedeManzano/dynamics-tips/refs/heads/master/dist/js/dynamics.min.js"></script>
+```
+
+### Descarga Manual
+
+[Descargar Dynamics Tips 2.5.2](https://mega.nz/file/kFFGAT4T#hCPWpJDciRYSmvtML8wnv1ZZ_rxX62ozvP5EjPWnKRY)
+
+---
+
+## 🚀 Inicio Rápido
+
+### 1. Incluye los archivos
 
 ```html
 <!DOCTYPE html>
@@ -88,576 +84,420 @@ pueden obtenerse clonando este mismo repositorio.
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/dynamics-tips/refs/heads/master/dist/css/dynamics.min.css">
-
-    <style>
-        .estilos {
-            width: 70%;
-            margin: auto;
-            margin-top: 100px;
-            display: flex;
-            justify-content: space-around;
-        }
-    </style>
-
-
-    <title>Plantilla</title>
+    
+    <!-- Dynamics Tips CSS -->
+    <link rel="stylesheet" href="path/to/dynamics.min.css">
+    
+    <title>Mi Aplicación</title>
 </head>
 <body>
+    <!-- Tu contenido aquí -->
     
-    <div id="test" class="estilos">
-        <h1>Plantillade prueba de Dynamics-Tips</h1>
-        <button class="com-trigger" data-info="Esto es un Comentario Derecho" data-pos="right">Derecha</button>
-        <button class="com-trigger" data-info="Esto es un Comentario Izquierdo" data-pos="left">Izquierda</button>
-        <button class="com-trigger" data-info="Esto es un Comentario Abajo" data-pos="bottom">Abajo</button>
-        <button class="com-trigger" data-info="Esto es un Comentario Arriba" data-pos="top">Arriba</button>
-        <button class="com-trigger" data-info="Esto es un Comentario Click" data-pos="top" data-evt="click">Click</button>
-    </div>
-    
-    <script src="https://rawcdn.githack.com/FedeManzano/dynamics-tips/refs/heads/master/dist/js/dynamics.min.js"></script>
+    <!-- Dynamics Tips JS -->
+    <script src="path/to/dynamics.min.js"></script>
 </body>
 </html>
 ```
 
-### :package: NPM 
+### 2. Usa los componentes
 
-La otra forma de disponer de la biblioteca es através del gestor de paquetes de Nodejs ingresando el siguiente comando 
-desde el shell.
+```html
+<!-- ToolTip simple -->
+<button class="tips-ele" data-tips="¡Hola! Soy un tooltip" data-pos="top">
+    Pasa el cursor aquí
+</button>
 
-```shell
-npm install dytips
+<!-- Comentario con más información -->
+<button class="com-trigger" 
+        data-info="<strong>Información importante:</strong> Este es un comentario con más detalles."
+        data-pos="right">
+    Ver información
+</button>
+
+<!-- Toast programático -->
+<button onclick="DY.Toast({html: '¡Operación exitosa!', tiempo: 3000})">
+    Mostrar notificación
+</button>
 ```
-## :pushpin: Utilización
 
-Lo primero que hay que hacer cuando queremos utilizar esta biblioteca es inicializar los módulos que necesitemos, dependiendo
-de los elementos que disparan los eventos estáticos (incluidos dentro del HTML) o dinámicos (se incorporan dentro del html luego de iniciada la página).
-  1. Automática (Con añadir el archivo *dynamics.min.js* se inicializan todos los módulos)
-  2. Manual (Cada módulo se inicializará con su función específica a través del objeto *DY*)
+### 3. ¡Listo! 🎉
 
-> Cuando los elementos dinámicos están asociados a componentes que no están definidos de manera estática dentro del DOM, sino que 
-se ingresan dinámicamente a través de JS, es necesario inicializar los módulos manualmente.
+Los componentes se inicializan automáticamente. Para elementos dinámicos, usa la inicialización manual:
 
-### :pencil: Modificación
+```javascript
+// Después de agregar elementos dinámicamente
+DY.ToolTipsInit();
+DY.CommentsInit();
+DY.DropdownInit();
+```
 
-Todos los elementos dinámicos bienen con estilos predefinidos, los cuales pueden ser modificados para poder ajustrlos a nuestras 
-necesidades, desde el código fuente podemos clonar el repositorio, de manera tal de disponer de los archivos ```SASS```.
+---
 
-```shell
+## 🎯 Componentes
+
+### 1️⃣ ToolTips
+
+Información contextual que aparece al interactuar con un elemento.
+
+```html
+<button class="tips-ele" 
+        data-tips="Texto del tooltip"
+        data-pos="top|bottom|left|right"
+        data-evt="hover|click">
+    Elemento
+</button>
+```
+
+**Atributos:**
+
+| Atributo | Descripción | Valores | Default |
+|----------|-------------|---------|---------|
+| `data-tips` | Contenido del tooltip | HTML/Texto | - |
+| `data-pos` | Posición | `top`, `bottom`, `left`, `right` | `bottom` |
+| `data-evt` | Evento disparador | `hover`, `click` | `hover` |
+
+[Ver ejemplos completos →](https://bodystyle.webcindario.com/paginas/tooltips.html)
+
+---
+
+### 2️⃣ Comentarios
+
+Cuadros de información más grandes para contenido extenso.
+
+```html
+<button class="com-trigger" 
+        data-info="<p>Contenido del comentario</p>"
+        data-pos="right"
+        data-evt="hover">
+    Ver detalles
+</button>
+```
+
+**Atributos:**
+
+| Atributo | Descripción | Valores | Default |
+|----------|-------------|---------|---------|
+| `data-info` | Contenido del comentario | HTML/Texto | - |
+| `data-pos` | Posición | `top`, `bottom`, `left`, `right` | `bottom` |
+| `data-evt` | Evento disparador | `hover`, `click` | `hover` |
+
+[Ver ejemplos completos →](https://bodystyle.webcindario.com/paginas/comentarios.html)
+
+---
+
+### 3️⃣ Dropdown
+
+Listas desplegables vinculadas a elementos disparadores.
+
+```html
+<!-- Disparador -->
+<button class="dropdown-toggle" 
+        data-target="#miLista" 
+        data-pos="bottom"
+        data-evt="click">
+    Abrir menú
+</button>
+
+<!-- Lista -->
+<div class="dropdown" id="miLista">
+    <ul>
+        <li><a href="#opcion1">Opción 1</a></li>
+        <li><a href="#opcion2">Opción 2</a></li>
+        <li><a href="#opcion3">Opción 3</a></li>
+    </ul>
+</div>
+```
+
+**Atributos:**
+
+| Atributo | Descripción | Valores | Default |
+|----------|-------------|---------|---------|
+| `data-target` | ID de la lista | Selector CSS | - |
+| `data-pos` | Posición | `top`, `bottom`, `left`, `right` | `bottom` |
+| `data-evt` | Evento disparador | `hover`, `click` | `click` |
+| `data-color` | Color de la flecha | Color CSS | `#000` |
+
+[Ver ejemplos completos →](https://bodystyle.webcindario.com/paginas/dropdown.html)
+
+---
+
+### 4️⃣ Toast
+
+Notificaciones temporales que aparecen en pantalla.
+
+```javascript
+DY.Toast({
+    html: '<p>¡Operación completada!</p>',
+    clases: ['mi-clase-custom'],
+    tiempo: 3000,  // Duración en milisegundos
+    cerrar: true   // Mostrar botón de cierre
+});
+```
+
+**Configuración:**
+
+| Propiedad | Tipo | Descripción | Default |
+|-----------|------|-------------|---------|
+| `html` | String | Contenido HTML | - |
+| `clases` | Array | Clases CSS adicionales | `[]` |
+| `tiempo` | Number | Duración en ms | `3000` |
+| `cerrar` | Boolean | Botón de cierre manual | `false` |
+
+[Ver ejemplos completos →](https://bodystyle.webcindario.com/paginas/toast.html)
+
+---
+
+### 5️⃣ Componentes Personalizados
+
+Crea tus propios componentes dinámicos.
+
+```javascript
+DY.PerInit({
+    ori: '.mi-disparador',    // Clase del elemento disparador
+    ele: '.mi-componente'     // Clase del elemento dinámico
+});
+```
+
+[Ver ejemplos completos →](https://bodystyle.webcindario.com/paginas/personalizados.html)
+
+---
+
+## 🎨 Personalización
+
+### Modificar Estilos con SASS
+
+Clona el repositorio para acceder a los archivos fuente:
+
+```bash
 git clone https://github.com/FedeManzano/dynamics-tips
+cd dynamics-tips
 ```
 
-```shell
-sass -s compressed sass/dynamics.scss dist/css/dinamics.css
-```
+Edita las variables en los archivos SASS:
 
-#### ToolTips 
+#### ToolTips (`sass/_tips.scss`)
 
-Desde el archivo ```sass/_tips.scss``` podemos modificar algunas propiedades que permitirán ajustar los estilos y utlizar los elementos dinámicos adaptados al sitio o app en desarrollo.
-
-```sass
-/**
-    Estilos de para los Tooltips
-*/
-
-// Color de fondo
+```scss
+// Variables personalizables
 $bg: rgba(0, 0, 0, 0.863);
-
-// Padding 
 $padding: 2px 5px 5px 5px;
-
-// Color de la letra
 $color: white;
-
-// Redondeado de los bordes
 $border-radius: 5px;
-
-// Tamaño de el elemento donde apunta el tooltips
 $tam-flecha: 5px;
-
-
-.tips 
-{
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    position: absolute !important; 
-    padding: $padding !important;
-    color: $color !important;
-    background-color: $bg !important;
-    border-radius: $border-radius !important;
-    white-space: nowrap !important;
-    transform: translate(0);
-    transition: transform 0.3s ease;
-
-
-    @mixin flecha_derecha () {
-        position: absolute;
-        border-top: $tam-flecha solid transparent;
-        border-bottom: $tam-flecha solid transparent;
-        border-left: $tam-flecha solid $bg;
-        top: calc(50% - 4.5px);
-        left: calc(100% - 1px);
-    }
-    
-     @mixin flecha_izquierda () {
-        position: absolute !important;
-        border-top: $tam-flecha solid transparent !important;
-        border-bottom: $tam-flecha solid transparent !important;
-        border-right: $tam-flecha solid  $bg !important;
-        top: calc(50% - 4.5px) !important;
-        left: -4px !important;
-    }    
-
-    @mixin flecha_abajo () {
-        position: absolute;
-        border-left: $tam-flecha solid transparent;
-        border-top: $tam-flecha solid $bg;
-        border-right: $tam-flecha solid transparent;
-        bottom: -4.5px;
-        left: calc(50% - 4.5px)
-    }
-
-    @mixin flecha_arriba() {
-        position: absolute;
-        border-left: $tam-flecha solid transparent;
-        border-bottom: $tam-flecha solid $bg;
-        border-right: $tam-flecha solid transparent;
-        top: -4px;
-        left: calc(50% - 4.5px)
-    }
-
-    .mueca-der {
-        @include flecha_derecha()
-    }
-
-    .mueca-izq {
-        @include flecha_izquierda()
-    }
-
-    .mueca-arr {
-        @include flecha_arriba()
-    }
-
-
-    .mueca-aba {
-        @include flecha_abajo()
-    }
-
-}
-
-.tips-ele {
-    z-index: 0;
-    position: relative ;
-    overflow: visible !important;
-}
 ```
 
-#### Comentarios
+#### Comentarios (`sass/_comments.scss`)
 
-Desde el archivo ```_comments.scss``` podemos realizar la misma acción que con los tooltips.
-
-```sass
-/**
-  Desde estas variables podemos modificar los estilos del comentario
-  manteniendo las funciones lógicas que permiten el funcionamiento
-*/
+```scss
 $bg: rgb(255, 255, 255);
 $border: 1px solid rgba(0, 0, 0, 0.295);
 $border-radius: 5px;
 $padding: 10px;
 $color: rgb(48, 48, 48);
 $fz: 14px;
-
-
-.com-dinamico {
-    position: absolute !important;
-    background-color: $bg;
-    max-width: 270px !important;
-    font-size: $fz;
-    padding: $padding;
-    border-radius: $border-radius;
-    border: $border;
-    color: $color;
-    line-height: 20px;
-    transform: translate(0);
-    transition: transform 0.3s;
-}
-
-.com-trigger {
-    overflow: visible !important;
-}
 ```
 
-#### Dropdown
+#### Compilar SASS
 
-Desde el archivo ```dropdown.scss``` podemos modificar la lista desplegable del dropdown.
+```bash
+# Instalar dependencias
+npm install
 
-```sass
-.dropdown-toggle {
-    z-index: 10000000;
-    position: relative;
-    padding-right: 20px !important;
-}
-
-.dropdown-toggle .f-abajo {
-    position: absolute; 
-}
-
-.dropdown {
-    position: absolute;
-    background-color: white !important;
-    border: 1px solid rgba(0, 0, 0, 0.123);
-    min-width: 150px;
-    height: fit-content;
-    overflow: hidden;
-    border-radius: 4px;
-    transform: translate(0);
-    transition: transform 0.3s;
-
-    ul {
-        list-style: none !important;
-        padding: 0px !important;
-        margin: 0px !important;
-        a {
-            display: block;
-            width: 100%;
-            color: black;
-            text-decoration: none;
-            padding: 5px;
-            white-space: nowrap;
-            margin: 0px !important;
-            &:hover{
-                background-color: rgba(0, 0, 0, 0.068);
-            }
-        }
-    }
-}
-
+# Compilar CSS
+sass --style compressed sass/dynamics.scss dist/css/dynamics.min.css
 ```
 
-#### Toast
+---
 
-```sass
-.toast {
-    position: fixed;
-    padding: 15px;
-    border-radius: 5px;
-    right: 30px;
-    top: 250px;
-    transition: top 1s;
-    background-color: rgb(21, 23, 32);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: subir 1s  0s 1  linear;
-    box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.137);
-}
+## 📚 Documentación
 
+### Documentación Completa
 
-.toast .cerrar {
-    position: relative;
-    border-radius: 3px;
-    width: 20px;
-    height: 20px;
-    padding: 5px;
-    cursor: pointer;
-    margin-left: 5px;
-}
+- [Documentación Bodystyle](https://bodystyle.webcindario.com/)
+- [Descargar Docs PDF](https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk)
 
-.toast .cerrar:hover {
-    background-color: rgba(255, 255, 255, 0.397);
-}
+### API Global
 
-.toast .cerrar::before,
-.toast .cerrar::after  {
-    content:  "";
-    position: absolute;
-    width: 15px;
-    height: 3px;
-    background-color: white;
-    left:  calc(50% - 7.2px);
-    top:  calc(50% - 3px);
-}
-.toast .cerrar::before {
-    transform: rotate(45deg);
-}
+Todas las funcionalidades están disponibles a través del objeto global `DY`:
 
+```javascript
+// Toasts
+DY.Toast(config)
 
-.toast .cerrar::after {
-    transform: rotate(-45deg);
-}
+// ToolTips
+DY.ToolTipsInit()      // Inicializar
+DY.ToolTipsDestroy()   // Destruir
 
-@keyframes subir {
-    from {
-        top: 300px;
-    }to {
-        top: 75px;
-    }
-}
+// Comentarios
+DY.CommentsInit()
+DY.CommentsDestroy()
+
+// Dropdown
+DY.DropdownInit()
+DY.DropdownDestroy()
+
+// Personalizados
+DY.PerInit(config)
+DY.PerDestroy()
 ```
 
+### Inicialización Manual
 
-## :one: Tooltips
+Para elementos agregados dinámicamente al DOM:
 
-Uno de los elementos dinámicos más utilizados son los Tooltips, en la biblioteca se incluyen a través de una clase CSS 
-y un atributo ```data-tips```, luego de manera opcional podemos definir otros atributos como son: ```data-pos``` y ```data-evt``` que 
-establecen la posición y el evento disparador de la aparición del tooltips.
-
-### Ejemplo
-
-```html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- 
-        Inclusión del archivos de estilos o por CDN como se muestra en la sección correspondiente 
-        de esta documentación
-     -->
-    <link rel="stylesheet" href="[RUTA DEL ARCHIVO]/dynamics.min.css">
-
-    <style>
-        .estilos {
-            width: 70%;
-            margin: auto;
-            margin-top: 100px;
-            display: flex;
-            justify-content: space-around;
-        }
-    </style>
-
-
-    <title>ToolTips</title>
-</head>
-<body>
-    
-    <div id="test" class="estilos">
-        <button class="tips-ele" data-tips="Esto es un Tips Derecho" data-pos="right">Derecha</button>
-        <button class="tips-ele" data-tips="Esto es un Tips Izquierdo" data-pos="left">Izquierda</button>
-        <button class="tips-ele" data-tips="Esto es un Tips Abajo" data-pos="bottom">Abajo</button>
-        <button class="tips-ele" data-tips="Esto es un Tips Arriba" data-pos="top">Arriba</button>
-        <button class="tips-ele" data-tips="Esto es un Tips Click" data-pos="top" data-evt="click">Click</button>
-    </div>
-
-
-    <!-- JQUERY se utiliza solamente para añadir el elemento dinámico que se muestra debajo -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
-    <!-- Archivo JS de la biblioteca o por CDN -->
-    <script src="[RUTA DEL ARCHIVO]/dynamics.min.js"></script>
-
-    <script>
-
-        /**
-         *  Función que permite cargar correctamente los ToolTips
-         *  a elementos dinámicos  
-         */
-        window.onload = () => {
-            setTimeout( () => {
-
-                // Inicializa los Tooltips
-                DY.ToolTipsInit()
-            }, 100)
-        }
-
-        // Elemento dinámico que obliga a la inicialización manual
-        $("#test").append(`<button class='tips-ele' data-tips='Esto es un botón dinámico'>Dinámico</button>`)
-    </script>
-</body>
-</html>
-```
-### Tabla de Atributos
-
-| Attr      | Descripción |
-|---------  |-------------|
-|data-tips  | Almacena el html que se le quiere mostrar al usuario cuando aparece el tooltips                 |
-|data-pos   | Posición donde se pretende que aparezca (TOP / LEFT / RIGHT / BOTTOM) Default: bottom           |
-|data-evt   | Evento disparador (click | hover) por defecto (hover)                                           |
-
-> Para ver más ejemplos [Ver Docs](https://bodystyle.webcindario.com/paginas/tooltips.html)
-
-## :two: Comentarios
-
-Elementos similares a los tooltips con la diferencia que permiten cargar más html para mostrarle al usuario sin romper 
-ningún flujo dentro de la página, se utilizan cuando la información a mostrar es mucha, por esta razón en determinadas oportunidades
-son preferibles ante los Tooltips.
-
-### Ejemplo
-
-```html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="[RUTA_ARCH_CSS]/dynamics.css">
-
-    <style>
-        .estilos {
-            width: 70%;
-            margin: auto;
-            margin-top: 100px;
-            display: flex;
-            justify-content: space-around;
-        }
-    </style>
-
-
-    <title>Comentarios</title>
-</head>
-<body>
-    
-    <div id="test" class="estilos">
-        <!-- Se utiliza la clase com-trigger -->
-        <button class="com-trigger" data-info="Esto es un Comentario Derecho" data-pos="right">Derecha</button>
-        <button class="com-trigger" data-info="Esto es un Comentario Izquierdo" data-pos="left">Izquierda</button>
-        <button class="com-trigger" data-info="Esto es un Comentario Abajo" data-pos="bottom">Abajo</button>
-        <button class="com-trigger" data-info="Esto es un Comentario Arriba" data-pos="top">Arriba</button>
-        <button class="com-trigger" data-info="Esto es un Comentario Click" data-pos="top" data-evt="click">Click</button>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="[RUTA_ARCH_JS]/dynamics.js"></script>
-
-    <script>
-        window.onload = () => {
-            setTimeout( () => {
-                // Se inicializa el módulo
-                // porque hay un elemento dinámico
-                DY.CommentsInit()
-            }, 100)
-        }
-
-        // Elemento dinámico para la muestra del funcionamiento.
-        $("#test").append(`<button class='com-trigger' data-info='Esto es un botón dinámico'>Dinámico</button>`)
-    </script>
-</body>
-</html>
+```javascript
+window.onload = () => {
+    setTimeout(() => {
+        // Inicializar después de agregar elementos dinámicos
+        DY.ToolTipsInit();
+        DY.CommentsInit();
+        DY.DropdownInit();
+    }, 100);
+};
 ```
 
-| Attr      | Descripción |
-|---------  |-------------|
-|data-info  | Almacena el html que se le quiere mostrar al usuario cuando aparece el comentario               |
-|data-pos   | Posición donde se pretende que aparezca (TOP / LEFT / RIGHT / BOTTOM) Default: bottom           |
-|data-evt   | Evento disparador (click | hover) por defecto (hover)                                           |
+---
 
-> Para ver más ejemplos [Ver Docs](https://bodystyle.webcindario.com/paginas/comentarios.html)
+## 🏗️ Estructura del Proyecto
 
-## :three: Dropdown
-
-Este elemento es una lista que se muestra cuando el usuario pasa el cursor por un elemento o hace click en el mismo. 
-La lista se vincula con el elemento disparador a través de su ID y el atributo del data-target del elemento disparador por ej: un botón.
-
-### Ejemplo
-
-```html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Archivo dynamics.min.css ya sea fisicamente o a través de su CDN -->
-    <link rel="stylesheet" href="[RUTA_CSS]/dynamics.css">
-
-    <style>
-        .estilos {
-            width: 70%;
-            margin: auto;
-            margin-top: 100px;
-            display: flex;
-            justify-content: space-around;
-        }
-    </style>
-
-
-    <title>Dropdown</title>
-</head>
-<body>
-    
-    <div id="test" class="estilos">
-        <!--
-            DISPARADORES, todos tienen la clase .dropdown-toggle y apuntan a través del data-target al ID de la 
-            lista que está debajo.
-        -->
-        <button class="dropdown-toggle" data-target="#list" data-pos="right" data-color="#000" data-evt="hover">Derecha</button>
-        <button class="dropdown-toggle" data-target="#list" data-pos="left">Izquierda</button>
-        <button class="dropdown-toggle" data-target="#list" data-pos="bottom">Abajo</button>
-        <button class="dropdown-toggle" data-target="#list" data-pos="top">Arriba</button>
-        <button class="dropdown-toggle" data-target="#list" data-pos="right">Click</button>
-    </div>
-
-    <!--Lista desplegable que posee la clase .dropdown y el ID #list -->
-    <div class="dropdown" id="list">
-        <ul>
-            <li><a href="#">Item 1</a></li>
-            <li><a href="#">Item 2</a></li>
-            <li><a href="#">Item 3</a></li>
-            <li><a href="#">Item 4</a></li>
-            <li><a href="#">Item 5</a></li>
-        </ul>
-    </div>
-
-    <!--JQUERY solo se agrega para agregar el botón dinámico que esta definido abajo-->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="[RUTA_JS]/dynamics.js"></script>
-
-    <script>
-        window.onload = () => {
-            setTimeout( () => {
-                // Inicialización
-                DY.DropdownInit()
-            }, 100)
-        }
-
-        // Elemento dinámico que dispara el evento
-        $("#test").append(`<button class="dropdown-toggle" data-target="#list" data-pos="right">Dinámico</button>`)
-    </script>
-</body>
-</html>
+```
+dynamics-tips/
+├── dist/                    # Archivos compilados
+│   ├── css/
+│   │   ├── dynamics.css
+│   │   └── dynamics.min.css
+│   └── js/
+│       ├── dynamics.js
+│       └── dynamics.min.js
+├── sass/                    # Archivos fuente SASS
+│   ├── dynamics.scss
+│   ├── _general.scss
+│   ├── _tips.scss
+│   ├── _comments.scss
+│   ├── _dropdown.scss
+│   └── _toast.scss
+├── src/                     # Código fuente JavaScript
+│   ├── app.js
+│   └── modulos/
+│       ├── ToolTips.js
+│       ├── ComentariosDinamicos.js
+│       ├── DropDown.js
+│       ├── Toast.js
+│       ├── Personalizado.js
+│       └── posicionamineto/
+├── test/                    # Archivos de prueba
+├── logo/                    # Recursos gráficos
+├── package.json
+├── webpack.config.js
+└── README.md
 ```
 
-| Attr          | Descripción |
-|---------      |-------------|
-|data-target    | Apunta al ID de la lista .dropdown a desplegar                                                  |
-|data-pos       | Posición donde se pretende que aparezca (TOP / LEFT / RIGHT / BOTTOM) Default: bottom           |
-|data-evt       | Evento disparador (click | hover) por defecto (click)                                           |
-|data-color     | Color de la flecha decorativa que acompaña al elemento disparador.                              |
+---
 
-> Para ver más ejemplos [Ver Docs](https://bodystyle.webcindario.com/paginas/dropdown.html)
+## 🔧 Desarrollo
 
-## :four: Toasts
+### Requisitos
 
-Elemento dinámico que muestra un mensaje a partir de un evento disparador, el mismo aparece desde un altura
-determinada y sube hasta llegar al inicio de la pantalla.
+- Node.js >= 12.x
+- npm >= 6.x
 
-```js
-let conf = {
-    html: "<p class='parrafo' style='color: white;'>Esto es un Toast<p>", // HTML a mostrar
-    clases [
-        "clase_1",
-        "clase_2",
-        "clase_3"
-    ],
-    tiempo: 3000, // tiempo (MS) que dura el toast en pantalla
-    cerrar: false // Darle la oportunidad al usuario para que cierre el toast
-}
-DY.Toast(conf) // esto muestra el toast
+### Configuración
+
+```bash
+# Clonar repositorio
+git clone https://github.com/FedeManzano/dynamics-tips
+cd dynamics-tips
+
+# Instalar dependencias
+npm install
+
+# Compilar proyecto
+npm run build
 ```
 
-> Para ver más ejemplos [Ver Docs](https://bodystyle.webcindario.com/paginas/toast.html)
+### Scripts Disponibles
 
-## :five: Tips Personalizados
+```bash
+npm run build    # Compilar JavaScript con Webpack
+```
 
-Es posible definir eventos personalizados y mostrarlos como lo vimos con los comentarios y los tips, en este caso 
-es necesario inicializar el módulo con un objeto JSON con dos atributos (ori y ele) en el caso del primero es la clase 
-CSS asignada al elemento disparador, la misma puede ser cualesquiera definida por el desarrollador, el segundo (ele) 
-es la clase que se asignará al elemento dinámico personalizado de esta sección.
+---
 
-> Para ver más ejemplos [Ver Docs](https://bodystyle.webcindario.com/paginas/personalizados.html)
+## 🤝 Contribuir
 
-#### Autor [Federico Manzano](https://github.com/FedeManzano)
+Las contribuciones son bienvenidas. Por favor:
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add: nueva característica'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+---
+
+## 📝 Changelog
+
+### [2.5.2] - Actual
+
+- Mejoras en la apariencia de componentes
+- Actualización de funciones deprecadas de jQuery
+- Optimizaciones de rendimiento
+
+### Versiones Anteriores
+
+Ver [Releases](https://github.com/FedeManzano/dynamics-tips/releases) para el historial completo.
+
+---
+
+## 🐛 Reportar Problemas
+
+¿Encontraste un bug? [Abre un issue](https://github.com/FedeManzano/dynamics-tips/issues/new) con:
+
+- Descripción del problema
+- Pasos para reproducir
+- Comportamiento esperado vs actual
+- Capturas de pantalla (si aplica)
+- Versión de Dynamics Tips
+- Navegador y versión
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+
+```
+MIT License - Copyright (c) 2020 Bodystyle
+
+Se permite el uso, copia, modificación y distribución de este software
+con fines comerciales y no comerciales, siempre que se incluya el aviso
+de copyright y esta licencia.
+```
+
+---
+
+## 👨‍💻 Autor
+
+**Federico Manzano**
+
+- GitHub: [@FedeManzano](https://github.com/FedeManzano)
+- Proyecto Bodystyle: [bodystyle](https://github.com/FedeManzano/bodystyle)
+
+---
+
+## 🌟 Proyectos Relacionados
+
+- [Bodystyle](https://github.com/FedeManzano/bodystyle) - Framework CSS completo
+- [Bodystyle Docs](https://bodystyle.webcindario.com/) - Documentación oficial
+
+---
+
+## ⭐ Agradecimientos
+
+Si este proyecto te resulta útil, considera darle una estrella ⭐ en GitHub.
+
+---
+
+<p align="center">
+  Hecho con ❤️ por <a href="https://github.com/FedeManzano">Federico Manzano</a>
+</p>
