@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="./logo/logo.png" width="200px" alt="Dynamics Tips Logo" />
+  <img src="https://fotos.miarroba.com/th/1110/2869D0C82E32692297AE326922979C.png" width="200px" alt="Dynamics Tips Logo" />
 </p>
+
 
 <h1 align="center">Dynamics Tips</h1>
 
