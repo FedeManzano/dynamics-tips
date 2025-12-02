@@ -112,7 +112,7 @@
 
 .dropdown {
   position: absolute;
-  background-color: white !important;
+  background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.123);
   min-width: 150px;
   height: fit-content;
