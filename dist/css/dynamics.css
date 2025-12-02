@@ -126,7 +126,7 @@
   padding: 0px !important;
   margin: 0px !important;
 }
-.dropdown ul a {
+.dropdown ul li a {
   display: block;
   width: 100%;
   color: black;
@@ -135,7 +135,7 @@
   white-space: nowrap;
   margin: 0px !important;
 }
-.dropdown ul a:hover {
+.dropdown ul li a:hover {
   background-color: rgba(0, 0, 0, 0.068);
 }
 

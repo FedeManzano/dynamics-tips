@@ -24,17 +24,19 @@
         padding: 0px !important;
         margin: 0px !important;
 
-        a {
-            display: block;
-            width: 100%;
-            color: black;
-            text-decoration: none;
-            padding: 5px;
-            white-space: nowrap;
-            margin: 0px !important;
+        li {
+            a {
+                display: block;
+                width: 100%;
+                color: black;
+                text-decoration: none;
+                padding: 5px;
+                white-space: nowrap;
+                margin: 0px !important;
 
-            &:hover {
-                background-color: rgba(0, 0, 0, 0.068);
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.068);
+                }
             }
         }
     }

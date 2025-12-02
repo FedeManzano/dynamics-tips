@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,17 +20,19 @@
 
     <title>Plantilla de Pruebas</title>
 </head>
+
 <body>
-    
+
     <div id="test" class="estilos">
-        <button class="dropdown-toggle" data-target="#list" data-pos="right" data-color="#000" data-evt="hover">Derecha</button>
+        <button class="dropdown-toggle" data-target="#list" data-pos="right" data-color="#000"
+            data-evt="hover">Derecha</button>
         <button class="dropdown-toggle" data-target="#list" data-pos="left">Izquierda</button>
         <button class="dropdown-toggle" data-target="#list" data-pos="bottom">Abajo</button>
         <button class="dropdown-toggle" data-target="#list" data-pos="top">Arriba</button>
         <button class="dropdown-toggle" data-target="#list" data-pos="right">Click</button>
     </div>
 
-    <div class="dropdown" id="list">
+    <div class="dropdown" id="list" style="background-color: #000;">
         <ul>
             <li><a href="#">Item 1</a></li>
             <li><a href="#">Item 2</a></li>
@@ -45,7 +48,7 @@
 
     <script>
         window.onload = () => {
-            setTimeout( () => {
+            setTimeout(() => {
                 DY.DropdownInit()
             }, 100)
         }
@@ -53,4 +56,5 @@
         $("#test").append(`<button class="dropdown-toggle" data-target="#list" data-pos="right">Dinámico</button>`)
     </script>
 </body>
+
 </html>
