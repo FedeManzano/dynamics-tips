@@ -43,8 +43,6 @@ class Posicionamiento {
         return offsetTopOrigen - wScrollTop > tipsHeight + 6
     }
 
-
-
     /**
      * 
      * @param {Elemento al que se le añade el elemento dinámico} origen 

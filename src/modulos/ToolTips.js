@@ -20,10 +20,6 @@ import Direccion from "./posicionamineto/Direccion";
     // tootips
     let activo = false
 
-    /**
-     * Evento que permite gestionar los 
-     * tooltips cuando se redimensiona la pantalla.
-     */
     const eventoResize = () => {
         if (activo) {
             document.querySelectorAll(".mueca-aba").forEach(e => e.remove())

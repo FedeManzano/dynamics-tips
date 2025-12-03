@@ -1,93 +1,129 @@
 
-import $ from "jquery";
 import Direccion from "./posicionamineto/Direccion";
 
-(function(){
+(function () {
 
-    let comentario = null, 
+    let comentario = null,
         origen = null,
         comp = null,
         activo = false
 
+    // Singleton para el elemento complemento
+    let complementoElement = null
+
     const arrancar = (origen, comentario) => {
-        let pos = $(origen).data("pos")
+        let pos = origen.dataset.pos || "abajo"
         Direccion.posicionar(pos, origen, comentario, true)
         activo = true
     }
 
-    const eventoClick = (e) => {
-        comp = $("<div class='com-complemento'>")
-        $("body").append(comp)
-        $(e).on("click",(e) => {
-            comentario = $("<div class='com-dinamico'></div>")
-            origen = e.target
-            $(comentario).append($(origen).data("info"))
-            $("body").append(comentario) 
-            $(comentario).show()
-            $(comp).show()
-            arrancar(origen, comentario)
-        })
+    // Funciones nombradas para event handlers - Click
+    const handleClickTrigger = function (evt) {
+        // Crear complemento si no existe (Singleton)
+        if (!complementoElement) {
+            complementoElement = document.createElement("div")
+            complementoElement.classList.add("com-complemento")
+            document.body.appendChild(complementoElement)
+            complementoElement.addEventListener("click", handleCompClick)
+        }
 
-        $(comp).on("click",(e) => {
-            $(".com-dinamico").remove()
-            $(".com-complemento").hide()
-            activo = false
-        })
-    }
+        comentario = document.createElement("div")
+        comentario.classList.add("com-dinamico")
+        document.body.appendChild(comentario)
+        comentario.style.display = "block"
+        comentario.innerHTML = this.dataset.info || ""
+        complementoElement.style.display = "block"
 
-    const MouseEnter = (e) => {
-        comentario = $("<div class='com-dinamico'></div>")
-        origen = e.target
-        $(comentario).append($(origen).data("info"))
-        $("body").append(comentario) 
-        $(comentario).show()
+        origen = this
         arrancar(origen, comentario)
     }
 
-    const MouseLeave = (e) => {
-        $(".com-dinamico").remove()
+    const handleCompClick = (evt) => {
+        document.querySelectorAll(".com-dinamico").forEach((e) => {
+            e.remove()
+        })
+        if (complementoElement) {
+            complementoElement.style.display = "none"
+        }
         activo = false
     }
 
-    const eventoHover = (e) => {
-        $(e).on({
-            mouseenter: MouseEnter,
-            mouseleave: MouseLeave
-        })
+    // Funciones nombradas para event handlers - Hover
+    const handleMouseEnter = function (e) {
+        comentario = document.createElement("div")
+        comentario.classList.add("com-dinamico")
+        document.body.appendChild(comentario)
+        comentario.style.display = "block"
+        origen = this
+        comentario.innerHTML = origen.dataset.info || ""
+        arrancar(origen, comentario)
     }
+
+    const handleMouseLeave = function (e) {
+        document.querySelectorAll(".com-dinamico").forEach((e) => {
+            e.remove()
+        })
+        activo = false
+    }
+
+    const eventoClick = (elemento) => {
+        elemento.addEventListener("click", handleClickTrigger)
+    }
+
+    const eventoHover = (elemento) => {
+        elemento.addEventListener("mouseenter", handleMouseEnter)
+        elemento.addEventListener("mouseleave", handleMouseLeave)
+    }
+
     const inicializar = () => {
-        $(".com-trigger").each((index, e) => {
-            switch($(e).data("evt")) {
-                case "hover": eventoHover(e)
+        document.querySelectorAll(".com-trigger").forEach((elemento) => {
+            const tipoEvento = elemento.dataset.evt || "hover"
+
+            switch (tipoEvento) {
+                case "hover":
+                    eventoHover(elemento)
                     break;
-                case "click": eventoClick(e)
+                case "click":
+                    eventoClick(elemento)
                     break;
-                default:  
-                    eventoHover(e)
-                    return
+                default:
+                    eventoHover(elemento)
             }
         })
 
-
-        $(window).scroll(() => {
-            if(activo) {
+        window.addEventListener("scroll", () => {
+            if (activo) {
                 arrancar(origen, comentario)
             }
         })
 
-        $(window).resize(() => {
-            if(activo) {
+        window.addEventListener("resize", () => {
+            if (activo) {
                 arrancar(origen, comentario)
             }
         })
     }
 
     const destroy = () => {
-        $(".com-trigger").off()
-        $(".com-dinamico").off()
-        comentario = null, 
-        origen = null,
+        document.querySelectorAll(".com-trigger").forEach((elemento) => {
+            elemento.removeEventListener("click", handleClickTrigger)
+            elemento.removeEventListener("mouseenter", handleMouseEnter)
+            elemento.removeEventListener("mouseleave", handleMouseLeave)
+        })
+
+        // Limpiar elementos del DOM
+        document.querySelectorAll(".com-dinamico").forEach((e) => e.remove())
+
+        if (complementoElement) {
+            complementoElement.removeEventListener("click", handleCompClick)
+            complementoElement.remove()
+            complementoElement = null
+        }
+
+        comentario = null
+        origen = null
         comp = null
+        activo = false
     }
 
     const ComentarioDinamico = {
