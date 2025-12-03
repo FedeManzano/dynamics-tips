@@ -1,5 +1,5 @@
 /*!
- * Dynamics-Tips 2.5.0
+ * Dynamics-Tips 3.0.0
  * Repositorio: https://github.com/FedeManzano/dynamics-tips
  * @author: Federico Manzano
  * Licencia MIT
@@ -10,7 +10,7 @@ import Dropdown from "./modulos/DropDown"
 import Toast from "./modulos/Toast"
 import Personalizado from "./modulos/Personalizado"
 
-(function() {
+(function () {
 
     /** INICIALIZACIÓN AUTOMÁTICA ***************************************/
     ToolTips.iniciar() // Inicializa los tooltips de manera automática
@@ -105,7 +105,7 @@ import Personalizado from "./modulos/Personalizado"
         ToolTipsDestroy: () => ToolTipsDestroy(),
         CommentsInit: () => CommentsInit(),
         CommentsDestroy: () => CommentsDestroy(),
-        DropdownInit: () =>  DropdownInit(),
+        DropdownInit: () => DropdownInit(),
         DropdownDestroy: () => DropdownDestroy()
     }
     window.DY = DY

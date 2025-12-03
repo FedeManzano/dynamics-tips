@@ -1,6 +1,6 @@
 .toast {
     position: fixed;
-    padding: 15px;
+    padding: 8px;
     border-radius: 5px;
     right: 30px;
     top: 250px;
@@ -10,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: subir 1s  0s 1  linear;
+    animation: subir 1s 0s 1 linear;
     box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.137);
 }
 
@@ -30,15 +30,16 @@
 }
 
 .toast .cerrar::before,
-.toast .cerrar::after  {
-    content:  "";
+.toast .cerrar::after {
+    content: "";
     position: absolute;
     width: 15px;
     height: 3px;
     background-color: white;
-    left:  calc(50% - 7.2px);
-    top:  calc(50% - 3px);
+    left: calc(50% - 7.2px);
+    top: calc(50% - 3px);
 }
+
 .toast .cerrar::before {
     transform: rotate(45deg);
 }
@@ -51,7 +52,9 @@
 @keyframes subir {
     from {
         top: 300px;
-    }to {
+    }
+
+    to {
         top: 75px;
     }
 }

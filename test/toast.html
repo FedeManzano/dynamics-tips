@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../css/dynamics.css">
+    <link rel="stylesheet" href="../dist/css/dynamics.css">
 
     <style>
         .estilos {
@@ -19,22 +20,24 @@
 
     <title>Plantilla de Pruebas</title>
 </head>
+
 <body>
-    
+
     <div id="test" class="estilos">
-        <button onclick="DY.Toast({html: 'Esto es un toast'})"></button>        
+        <button onclick="DY.Toast({html: 'Esto es un toast', cerrar: true})"></button>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../dist/js/dynamics.js"></script>
 
     <script>
         window.onload = () => {
-            setTimeout( () => {
+            setTimeout(() => {
                 DY.ToolTipsInit()
             }, 100)
         }
 
-        $("#test").append(`<button onclick='DY.Toast({html: 'Esto es un toast'})'>Dinámico</button>`)
+        $("#test").append(`<button onclick='DY.Toast({html: 'Esto es un toast', cerrar: true})'>Dinámico</button>`)
     </script>
 </body>
+
 </html>
