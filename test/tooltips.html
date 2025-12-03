@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../css/dynamics.css">
+    <link rel="stylesheet" href="../dist/css/dynamics.css">
 
     <style>
         .estilos {
@@ -19,8 +20,9 @@
 
     <title>Plantilla de Pruebas</title>
 </head>
+
 <body>
-    
+
     <div id="test" class="estilos">
         <button class="tips-ele" data-tips="Esto es un Tips Derecho" data-pos="right">Derecha</button>
         <button class="tips-ele" data-tips="Esto es un Tips Izquierdo" data-pos="left">Izquierda</button>
@@ -35,7 +37,7 @@
 
     <script>
         window.onload = () => {
-            setTimeout( () => {
+            setTimeout(() => {
                 DY.ToolTipsInit()
             }, 100)
         }
@@ -43,4 +45,5 @@
         $("#test").append(`<button class='tips-ele' data-tips='Esto es un botón dinámico'>Dinámico</button>`)
     </script>
 </body>
+
 </html>

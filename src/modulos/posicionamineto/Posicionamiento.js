@@ -1,4 +1,3 @@
-import $ from "jquery"
 
 /**
  * Clase que ocupa el núcleo de posicionamiento de la 
@@ -46,6 +45,12 @@ class Posicionamiento {
 
 
 
+    /**
+     * 
+     * @param {Elemento al que se le añade el elemento dinámico} origen 
+     * @param {Elemento dinámico} ele 
+     * @returns {boolean} true si el elemento dinámico puede ser posicionado abajo
+     */
     static puedeAbajo(origen, ele) {
         const windowHeight = window.innerHeight
         const wScrollTop = window.pageYOffset
@@ -59,86 +64,86 @@ class Posicionamiento {
 
 
     static puedeDerecha(origen, ele) {
-        const windowWidth = $(window).width()
-        const origenOffsetLeft = $(origen).offset().left
-        const origenWidth = $(origen).width()
-        const tipsWidth = $(ele).width()
+        const windowWidth = document.documentElement.clientWidth
+        const origenOffsetLeft = origen.getBoundingClientRect().left + window.pageXOffset
+        const origenWidth = origen.offsetWidth
+        const tipsWidth = ele.offsetWidth
         return windowWidth - origenOffsetLeft - origenWidth - 80 > tipsWidth + 5
     }
 
     static puedeIzquierda(origen, ele) {
-        return $(origen).offset().left > $(ele).width() + 5
+        return (origen.getBoundingClientRect().left + window.pageXOffset) > ele.offsetWidth + 5
     }
 
     static reacomodamientoHorizontal(origen, ele) {
-        var corr = ($(origen).outerWidth()) - $(ele).outerWidth()
+        var corr = (origen.offsetWidth) - ele.offsetWidth
         return Posicionamiento.posicionamientoInicialX(origen, ele) + Math.round(corr / 2)
     }
 
     static reacomodamientoVertical(origen, ele) {
-        var corr = ($(origen).outerHeight()) - $(ele).outerHeight()
+        var corr = (origen.offsetHeight) - ele.offsetHeight
         return Posicionamiento.posicionamientoInicialY(origen, ele) + Math.round(corr / 2)
     }
 
 
     static topeIzquierda(ele) {
-        const despIzq = $(ele).offset().left
+        const despIzq = ele.getBoundingClientRect().left + window.pageXOffset
         return despIzq <= 0 ? despIzq * -1 : 0
     }
 
     static topeArriba(ele) {
-        const despArr = $(ele).offset().top - $(window).scrollTop()
+        const despArr = ele.getBoundingClientRect().top
         return despArr <= 0 ? (despArr - 6) * -1 : 0
     }
 
     static topeDerecha(ele) {
-        const despDer = $(window).width() - $(ele).offset().left - $(ele).outerWidth()
+        const despDer = document.documentElement.clientWidth - (ele.getBoundingClientRect().left + window.pageXOffset) - ele.offsetWidth
         return despDer <= 0 ? Math.round((despDer - 6)) : 0
     }
 
     static posicionarArriba(origen, ele) {
-        $(ele).css("top", $(origen).offset().top - $(ele).outerHeight() - 5)
+        ele.style.top = (origen.getBoundingClientRect().top + window.pageYOffset - ele.offsetHeight - 5) + "px"
 
         var di = Posicionamiento.topeIzquierda(ele)
         var td = Posicionamiento.topeDerecha(ele)
 
         if (di !== 0) {
-            $(ele).css("left", Posicionamiento.reacomodamientoHorizontal(origen, ele) + di)
+            ele.style.left = (Posicionamiento.reacomodamientoHorizontal(origen, ele) + di) + "px"
             td = 0
         }
         if (td !== 0)
-            $(ele).css("left", Posicionamiento.reacomodamientoHorizontal(origen, ele) + td)
-        $(ele).css({ transform: 'translateY(-10px)' })
+            ele.style.left = (Posicionamiento.reacomodamientoHorizontal(origen, ele) + td) + "px"
+        ele.style.transform = 'translateY(-10px)'
     }
 
 
     static posicionarAbajo(origen, ele) {
-        $(ele).css("top", $(origen).offset().top + $(origen).outerHeight() + 5)
+        ele.style.top = (origen.getBoundingClientRect().top + window.pageYOffset + origen.offsetHeight + 5) + "px"
         var di = Posicionamiento.topeIzquierda(ele)
         var td = Posicionamiento.topeDerecha(ele)
         if (di !== 0) {
-            $(ele).css("left", Posicionamiento.reacomodamientoHorizontal(origen, ele) + di)
+            ele.style.left = (Posicionamiento.reacomodamientoHorizontal(origen, ele) + di) + "px"
             td = 0
         }
         if (td !== 0)
-            $(ele).css("left", Posicionamiento.reacomodamientoHorizontal(origen, ele) + td)
-        $(ele).css({ transform: 'translateY(10px)' })
+            ele.style.left = (Posicionamiento.reacomodamientoHorizontal(origen, ele) + td) + "px"
+        ele.style.transform = 'translateY(10px)'
     }
 
     static posicionarIzquierda(origen, ele) {
-        $(ele).css("left", $(origen).offset().left - $(ele).width() - 25)
+        ele.style.left = (origen.getBoundingClientRect().left + window.pageXOffset - ele.offsetWidth - 25) + "px"
         var da = Posicionamiento.topeArriba(ele)
         if (da !== 0)
-            $(ele).css("top", Posicionamiento.reacomodamientoVertical(origen, ele) + da)
-        $(ele).css({ transform: 'translateX(-10px)' })
+            ele.style.top = (Posicionamiento.reacomodamientoVertical(origen, ele) + da) + "px"
+        ele.style.transform = 'translateX(-10px)'
     }
 
     static posicionarDerecha(origen, ele) {
-        $(ele).css("left", $(origen).offset().left + $(origen).outerWidth() + 6)
-        let da = Posicionamiento.topeArriba(ele)
+        ele.style.left = (origen.getBoundingClientRect().left + window.pageXOffset + origen.offsetWidth + 15) + "px"
+        var da = Posicionamiento.topeArriba(ele)
         if (da !== 0)
-            $(ele).css("top", Posicionamiento.reacomodamientoVertical(origen, ele) + da)
-        $(ele).css({ transform: 'translateX(10px)' })
+            ele.style.top = (Posicionamiento.reacomodamientoVertical(origen, ele) + da) + "px"
+        ele.style.transform = 'translateX(10px)'
     }
 
 }

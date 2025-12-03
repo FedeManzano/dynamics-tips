@@ -6,8 +6,6 @@
  * por las actuales de JQUERY.
  */
 
-// Dependencia de desarrollo y producción jquery
-import $ from "jquery";
 
 // Módulo de posicionamiento general de todos los módulos
 import Direccion from "./posicionamineto/Direccion";
@@ -16,10 +14,10 @@ import Direccion from "./posicionamineto/Direccion";
 
     // Guarda el elemento origen
     // o sea el elemento disparador
-    let origen = null 
+    let origen = null
 
     // Elemento dinámico
-    let ele = null 
+    let ele = null
 
     // Complemento permite desaparecer el 
     // elemento dinámico asignado
@@ -34,11 +32,11 @@ import Direccion from "./posicionamineto/Direccion";
      * tooltips cuando se redimensiona la pantalla.
      */
     const eventoResize = () => {
-        if(activo) {
-            $(".mueca-aba").remove()
-            $(".mueca-arr").remove()
-            $(".mueca-izq").remove()
-            $(".mueca-der").remove()
+        if (activo) {
+            document.querySelectorAll(".mueca-aba").forEach(e => e.remove())
+            document.querySelectorAll(".mueca-arr").forEach(e => e.remove())
+            document.querySelectorAll(".mueca-izq").forEach(e => e.remove())
+            document.querySelectorAll(".mueca-der").forEach(e => e.remove())
             activar(origen, ele)
         }
     }
@@ -51,8 +49,7 @@ import Direccion from "./posicionamineto/Direccion";
      * @param {Elemento dinámico} ele 
      */
     const realizarAparicion = (origen, ele) => {
-        let pos = $(origen).data("pos")
-
+        let pos = origen.dataset.pos
         // Método que utliza el núcleo de posicionamiento
         // para ublicar de manera correcta el elemento
         Direccion.posicionar(pos, origen, ele, true)
@@ -66,7 +63,7 @@ import Direccion from "./posicionamineto/Direccion";
      * @param {Elemento dinámico a agregar} ele 
      */
     const activar = (origen, ele) => {
-        $("body").append(ele)
+        document.body.appendChild(ele)
         realizarAparicion(origen, ele)
     }
 
@@ -75,90 +72,85 @@ import Direccion from "./posicionamineto/Direccion";
      * Función que gestiona el evento click del usuario
      * @param {Elemento origen que desencadena el evento} e 
      */
-    const eventoClick = (e) => {
-
-        // Complemento que permite desaparecer el elemento 
-        // dinámico presionando en cualquier parte 
-        // de la pantalla
-        comp = $("<div class='tips-complemento'>")
-
-        // Añade el complemento al DOM
-        $("body").append(comp)
-
-        /**
-         * Evento click al elemento origen
-         */        
-        $(e).on("click",(e) => {
-            // Primero remueve todos los tips
-            // limpia la pantalla 
-            $(".tips").remove()
-
-            // Asigna al objeto origen el disparador del evento
-            origen = e.target 
-
-            // crea tips y le añade el contenidof del data-tips del
-            // orgen
-            ele = $("<div class='tips'></div>")
-            $(ele).append($(origen).data("tips"))
-
-            // Apararece el complemento
-            // para poder desaparecer al elemento
-            $(comp).show()
-
-            // Aparece el elemento dinámico en pantalla
-            activar(origen, ele)
-        })
-        
-        /**
-         * Cuando se hace click en el 
-         * complemento desaparece el tooltips
-         */
-        $(comp).on("click",(e) => {
-            $(".tips").remove()
-            $(".tips-complemento").hide()
-            activo = false
-        })
-    }
-
-    const MouseEnter = (e) => {
-        origen = e.target 
-        ele = $("<div class='tips'></div>")
-        $(ele).append($(origen).data("tips"))
+    const handleClick = (evt) => {
+        document.querySelectorAll(".tips").forEach(el => el.remove())
+        origen = evt.target
+        ele = document.createElement("div")
+        ele.classList.add("tips")
+        ele.innerHTML = origen.dataset.tips
+        if (comp) comp.style.display = 'block'
         activar(origen, ele)
     }
 
-    const MouseLeave = (e) => {
-        $(ele).remove()
+    const handleCompClick = () => {
+        document.querySelectorAll(".tips").forEach(el => el.remove())
+        if (comp) comp.style.display = 'none'
+        activo = false
+    }
+
+    /**
+     * Función que gestiona el evento click del usuario
+     * @param {Elemento origen que desencadena el evento} e 
+     */
+    const eventoClick = (e) => {
+        // Singleton pattern for comp
+        if (!comp) {
+            comp = document.createElement("div")
+            comp.classList.add("tips-complemento")
+            document.body.appendChild(comp)
+            comp.addEventListener("click", handleCompClick)
+        }
+
+        e.addEventListener("click", handleClick)
+    }
+
+    const MouseEnter = (e) => {
+        origen = e.target
+        ele = document.createElement("div")
+        ele.classList.add("tips")
+        ele.innerHTML = origen.dataset.tips
+        activar(origen, ele)
+    }
+
+    const MouseLeave = () => {
+        if (ele) ele.remove()
         activo = false
     }
 
     const eventoHover = (e) => {
-        $(e).on({
-            mouseenter : MouseEnter,
-            mouseleave: MouseLeave
-        })
+        e.addEventListener("mouseenter", MouseEnter)
+        e.addEventListener("mouseleave", MouseLeave)
     }
+
     const inicializar = () => {
-        
-        $(".tips-ele").each((index, e) => {
-            let evento = $(e).data("evt")
-            if(evento === "click")
+        console.log("ToolTips: inicializar")
+        document.querySelectorAll(".tips-ele").forEach((e) => {
+            let evento = e.dataset.evt
+            console.log("ToolTips: element found", e, "event:", evento)
+            if (evento === "click")
                 eventoClick(e)
-            else if(evento === "hover")
+            else if (evento === "hover")
                 eventoHover(e)
-            else 
+            else
                 eventoHover(e)
         })
 
-        $(window).on("resize",eventoResize)
+        window.addEventListener("resize", eventoResize)
     }
 
     const destroy = () => {
-        $(".tips-ele").off()
-        $(window).off("resize", eventoResize)
-        origen = null 
-        ele = null 
-        comp = null
+        document.querySelectorAll(".tips-ele").forEach((e) => {
+            e.removeEventListener("click", handleClick)
+            e.removeEventListener("mouseenter", MouseEnter)
+            e.removeEventListener("mouseleave", MouseLeave)
+        })
+        window.removeEventListener("resize", eventoResize)
+        if (comp) {
+            comp.remove()
+            comp = null
+        }
+        origen = null
+        ele = null
         activo = false
     }
 
@@ -169,6 +161,6 @@ import Direccion from "./posicionamineto/Direccion";
     }
 
     window.ToolTips = ToolTips
-}) ()
+})()
 
 export default ToolTips
