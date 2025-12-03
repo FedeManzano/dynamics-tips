@@ -10,6 +10,7 @@
 </p>
 
 <p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/MEGA-Download-red" alt="Descarga por mega"></a>
   <a href="https://www.npmjs.com/package/dytips"><img src="https://img.shields.io/npm/v/dytips?color=orange&label=npm" alt="NPM Version"></a>
   <a href="https://github.com/FedeManzano/dynamics-tips/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-purple" alt="License MIT"></a>
   <a href="https://github.com/FedeManzano/dynamics-tips/releases"><img src="https://img.shields.io/badge/version-3.0.0-red" alt="Version"></a>
