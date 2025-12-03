@@ -29,7 +29,7 @@
             border: 1px solid #666;
             min-width: 290px !important;
             padding-top: 7px;
-            position: absolute;
+            /* position: absolute; */
         }
 
         .menu_flotante .usuario {
@@ -82,7 +82,8 @@
 <body>
 
     <div id="test" class="container" style="margin-top: 500px;">
-        <button class="disparador" data-info="comentario izquierdo" data-pos="top" data-evt="click">Disparador</button>
+        <button class="disparador" data-info="comentario izquierdo" data-pos="right"
+            data-evt="click">Disparador</button>
     </div>
 
 
@@ -98,16 +99,56 @@
 
         document.querySelector(".disparador").dataset.info =
             `
-            <div  class="card" style="max-width: 300px;"> <!-- Comienza la tarjeta simple -->
-                <div  class="card-simple-dark"> <!-- Tarjeta oscura -->
-                    <h4>Título de la tarjeta<span  class="badge badge-rojo c-blanco">New</span></h4>
-                    <small>Pequeña descripción</small>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ex et optio.
-                    </p> 
-                    <button  href=""  class="btn-cover-sm-o btn-white-o mar-2">Subs</button>
-                </div><!-- FIN Tarjeta oscura -->
-            </div>        
+        <div  class="menu_flotante">
+            <div  class="usuario">
+                <img  src="../imagenes/20191106_205049.png"  alt="Foto de perfil">
+                <div  class="">
+                    <span  class="f-w-7">Federico Manzano</span> <br>
+                    <a  href=""  class="link">Gestionar Cuenta</a>
+                </div>
+            </div>
+            <div  class="divisor"></div>
+            <div  class="item">
+                <i  class="bs-home"></i>
+                <a  href="">Home</a>
+            </div>
+            
+            <div  class="item">
+                <i  class=" bs-menu-list-2"></i>
+                <a  href="">Bibliotecas</a>
+            </div>
+            <div  class="item">
+                <i  class=" bs-man"></i>
+                <a  href="">Perfil</a>
+            </div>
+            <div  class="item">
+                <i  class=" bs-js-2"></i>
+                <a  href="">Configuración</a>
+            </div>
+            <div  class="divisor mb-1"></div>
+            <div  class="item">
+                <i  class=" bs-folder"></i>
+                <a  href="">Archivos</a>
+            </div>
+            <div  class="item">
+                <i  class=" bs-github-2"></i>
+                <a  href="">Repositorios</a>
+            </div>
+            <div  class="item">
+                <i  class=" bs-comments"></i>
+                <a  href="">Mensajes</a>
+            </div>
+            <div  class="item">
+                <i  class=" bs-cloud-download"></i>
+                <a  href="">Descargas</a>
+            </div>
+            <div  class="divisor mb-2"></div>
+            <div  class="item mb-2">
+                <i  class=" bs-salir"></i>
+                <a  href="">Salir</a>
+            </div>
+        </div> 
+            
             `
 
     </script>

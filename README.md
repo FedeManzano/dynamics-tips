@@ -427,7 +427,34 @@ npm run build    # Compilar JavaScript con Webpack
 
 ---
 
-## 🤝 Contribuir
+## � Tests y Cobertura
+
+El proyecto cuenta con una suite completa de tests unitarios utilizando **Jest** y **JSDOM**.
+
+### Ejecutar Tests
+
+```bash
+# Ejecutar todos los tests
+npm test
+
+# Ejecutar tests con reporte de cobertura
+npm test -- --coverage
+```
+
+### Cobertura Actual
+
+| Métrica | Porcentaje | Estado |
+|---------|------------|--------|
+| **Statements** | 94% | 🟢 Excelente |
+| **Branches** | 69% | 🟡 Bueno |
+| **Functions** | 91% | 🟢 Excelente |
+| **Lines** | 95% | 🟢 Excelente |
+
+> **Nota:** La cobertura de ramas (branches) es menor debido a validaciones defensivas y casos extremos de posicionamiento que son difíciles de simular en JSDOM sin un entorno visual completo.
+
+---
+
+## �🤝 Contribuir
 
 Las contribuciones son bienvenidas. Por favor:
 
