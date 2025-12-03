@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet"
-        href="https://rawcdn.githack.com/FedeManzano/dynamics-tips/refs/heads/master/dist/css/dynamics.min.css">
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/bodystyle.min.css">
+    <!-- CDN -->
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+
+    <link rel="stylesheet" href="../dist/css/dynamics.min.css">
+
 
     <style>
         .estilos {
@@ -28,9 +34,9 @@
 
         .menu_flotante .usuario {
             display: flex;
-            justify-content: center;
+            justify-content: start;
             align-items: center;
-            padding: 5px 3px;
+            padding: 5px 10px;
         }
 
         .menu_flotante .usuario img {
@@ -75,77 +81,82 @@
 
 <body>
 
-    <div id="test" class="estilos">
-        <h1>Plantilla de prueba de Dynamics-Tips</h1>
-        <div id="test" class="estilos">
-            <button class="disparador" data-info="Esto es un Comentario Derecho" data-pos="right">Disparador</button>
-        </div>
+    <div id="test" class="container">
+
+
+        <button class="disparador" data-info="comentario izquierdo" data-pos="bottom"
+            data-evt="hover">Disparador</button>
+
+
+
 
 
     </div>
+
+
 
     <script src="../dist/js/dynamics.js"></script>
 
     <script>
         window.onload = () => {
             setTimeout(() => {
-                DY.PerInit({ ori: "disparador" })
+                DY.PerInit({ ori: "disparador", ele: "alert-op-black" })
             }, 100)
         }
-
-        document.querySelector(".disparador").dataset.info =
-            `
-                <div  class="menu_flotante"  style="max-width: 290px;">
-            <div  class="usuario">
-                <img  src="../imagenes/20191106_205049.png"  alt="Foto de perfil">
-                <div  class="">
-                    <span  class="f-w-7">Federico Manzano</span> <br>
-                    <a  href=""  class="link">Gestionar Cuenta</a>
-                </div>
-            </div>
-            <div  class="divisor"></div>
-            <div  class="item">
-                <i  class="bs-home"></i>
-                <a  href="">Home</a>
-            </div>
-            
-            <div  class="item">
-                <i  class=" bs-menu-list-2"></i>
-                <a  href="">Bibliotecas</a>
-            </div>
-            <div  class="item">
-                <i  class=" bs-man"></i>
-                <a  href="">Perfil</a>
-            </div>
-            <div  class="item">
-                <i  class=" bs-js-2"></i>
-                <a  href="">Configuración</a>
-            </div>
-            <div  class="divisor mb-1"></div>
-            <div  class="item">
-                <i  class=" bs-folder"></i>
-                <a  href="">Archivos</a>
-            </div>
-            <div  class="item">
-                <i  class=" bs-github-2"></i>
-                <a  href="">Repositorios</a>
-            </div>
-            <div  class="item">
-                <i  class=" bs-comments"></i>
-                <a  href="">Mensajes</a>
-            </div>
-            <div  class="item">
-                <i  class=" bs-cloud-download"></i>
-                <a  href="">Descargas</a>
-            </div>
-            <div  class="divisor mb-2"></div>
-            <div  class="item mb-2">
-                <i  class=" bs-salir"></i>
-                <a  href="">Salir</a>
-            </div>
-        </div> 
-    `
-
+        /*
+                document.querySelector(".disparador").dataset.info =
+                    `
+                            <div  class="menu_flotante"  style="max-width: 290px;">
+                            <div  class="usuario">
+                                <img  src="https://bodystyle.webcindario.com/imagenes/20191106_205049.png"  alt="Foto de perfil">
+                                <div  class="">
+                                    <span  class="f-w-7">Federico Manzano</span> <br>
+                                    <a  href=""  class="link">Gestionar Cuenta</a>
+                                </div>
+                            </div>
+                            <div  class="divisor"></div>
+                            <div  class="item">
+                                <i  class="bs-home"></i>
+                                <a  href="">Home</a>
+                            </div>
+                            
+                            <div  class="item">
+                                <i  class=" bs-menu-list-2"></i>
+                                <a  href="">Bibliotecas</a>
+                            </div>
+                            <div  class="item">
+                                <i  class=" bs-man"></i>
+                                <a  href="">Perfil</a>
+                            </div>
+                            <div  class="item">
+                                <i  class=" bs-js-2"></i>
+                                <a  href="">Configuración</a>
+                            </div>
+                            <div  class="divisor mb-1"></div>
+                            <div  class="item">
+                                <i  class=" bs-folder"></i>
+                                <a  href="">Archivos</a>
+                            </div>
+                            <div  class="item">
+                                <i  class=" bs-github-2"></i>
+                                <a  href="">Repositorios</a>
+                            </div>
+                            <div  class="item">
+                                <i  class=" bs-comments"></i>
+                                <a  href="">Mensajes</a>
+                            </div>
+                            <div  class="item">
+                                <i  class=" bs-cloud-download"></i>
+                                <a  href="">Descargas</a>
+                            </div>
+                            <div  class="divisor mb-2"></div>
+                            <div  class="item mb-2">
+                                <i  class=" bs-salir"></i>
+                                <a  href="">Salir</a>
+                            </div>
+                        </div> 
+                    `
+        */
     </script>
 </body>
 

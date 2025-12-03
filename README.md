@@ -12,8 +12,9 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/dytips"><img src="https://img.shields.io/npm/v/dytips?color=orange&label=npm" alt="NPM Version"></a>
   <a href="https://github.com/FedeManzano/dynamics-tips/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-purple" alt="License MIT"></a>
-  <a href="https://github.com/FedeManzano/dynamics-tips/releases"><img src="https://img.shields.io/badge/version-2.5.2-red" alt="Version"></a>
-  <a href="https://mega.nz/file/kFFGAT4T#hCPWpJDciRYSmvtML8wnv1ZZ_rxX62ozvP5EjPWnKRY"><img src="https://img.shields.io/badge/download-MEGA-green" alt="Download"></a>
+  <a href="https://github.com/FedeManzano/dynamics-tips/releases"><img src="https://img.shields.io/badge/version-3.0.0-red" alt="Version"></a>
+  <img src="https://img.shields.io/badge/jQuery-free-brightgreen" alt="jQuery Free">
+  <img src="https://img.shields.io/badge/size-20.2KB-blue" alt="Bundle Size">
 </p>
 
 <p align="center">
@@ -29,15 +30,17 @@
 
 ## 📖 Descripción
 
-**Dynamics Tips** es una biblioteca JavaScript ligera y modular que proporciona componentes dinámicos interactivos para aplicaciones web. Originalmente desarrollada como parte del ecosistema [Bodystyle](https://github.com/FedeManzano/bodystyle), se separó para ofrecer mayor modularidad y reutilización.
+**Dynamics Tips** es una biblioteca JavaScript **100% vanilla** (sin jQuery) que proporciona componentes dinámicos interactivos para aplicaciones web. Originalmente desarrollada como parte del ecosistema [Bodystyle](https://github.com/FedeManzano/bodystyle), ahora es una biblioteca independiente que será integrada en **Bodystyle 6.0.0**.
 
 ### ¿Por qué Dynamics Tips?
 
-- ✅ **Ligera y Rápida** - Código optimizado y minificado
+- ✅ **Ultra Ligera** - Solo 20.2 KB minificado (~6.7 KB gzipped)
+- ✅ **Sin Dependencias** - 100% vanilla JavaScript, sin jQuery
 - ✅ **Fácil de Usar** - API simple basada en data attributes
 - ✅ **Personalizable** - Variables SASS para adaptar a tu diseño
 - ✅ **Modular** - Importa solo lo que necesitas
 - ✅ **Bien Documentada** - Ejemplos claros y documentación completa
+- ✅ **Rendimiento Óptimo** - 95% más pequeña que versiones anteriores con jQuery
 
 ---
 
@@ -71,7 +74,7 @@ npm install dytips
 
 ### Descarga Manual
 
-[Descargar Dynamics Tips 2.5.2](https://mega.nz/file/kFFGAT4T#hCPWpJDciRYSmvtML8wnv1ZZ_rxX62ozvP5EjPWnKRY)
+[Descargar Dynamics Tips 3.0.0](https://github.com/FedeManzano/dynamics-tips/releases/latest)
 
 ---
 
@@ -438,7 +441,44 @@ Las contribuciones son bienvenidas. Por favor:
 
 ## 📝 Changelog
 
-### [2.5.2] - Actual
+### [3.0.0] - 2024-12-03 🎉
+
+**¡Migración completa a Vanilla JavaScript!**
+
+#### 🚀 Cambios Mayores
+
+- ✅ **Eliminada dependencia de jQuery** - 100% vanilla JavaScript
+- ✅ **Reducción de tamaño del 95%** - De 382 KB a 20.2 KB (minificado)
+- ✅ **Mejor rendimiento** - Sin overhead de jQuery
+- ✅ **Código modernizado** - ES6+ features
+
+#### 🐛 Bugs Corregidos
+
+- Corregido evento click mal asignado en ComentariosDinamicos
+- Corregido contenido faltante en modo click
+- Corregido método `destroy()` en todos los módulos
+- Corregido `setInterval` sin limpiar en Toast (ahora usa `setTimeout`)
+- Corregidos múltiples errores de sintaxis en migraciones parciales
+
+#### ✨ Mejoras
+
+- Implementado patrón Singleton para elementos complemento
+- Funciones nombradas para event handlers (mejor limpieza)
+- Validaciones mejoradas para data attributes
+- Animaciones CSS mejoradas
+- Función helper `crearFlecha()` en DropDown
+
+#### 🔄 Migración desde 2.x
+
+La API pública permanece **100% compatible**. No se requieren cambios en tu código.
+
+#### 🎯 Próximamente
+
+- Integración en **Bodystyle 6.0.0**
+- Tests automatizados con Jest
+- TypeScript definitions
+
+### [2.5.2] - 2024-11-XX
 
 - Mejoras en la apariencia de componentes
 - Actualización de funciones deprecadas de jQuery
@@ -446,7 +486,7 @@ Las contribuciones son bienvenidas. Por favor:
 
 ### Versiones Anteriores
 
-Ver [Releases](https://github.com/FedeManzano/dynamics-tips/releases) para el historial completo.
+Ver [CHANGELOG.md](CHANGELOG.md) y [Releases](https://github.com/FedeManzano/dynamics-tips/releases) para el historial completo.
 
 ---
 
@@ -489,6 +529,7 @@ de copyright y esta licencia.
 ## 🌟 Proyectos Relacionados
 
 - [Bodystyle](https://github.com/FedeManzano/bodystyle) - Framework CSS completo
+- [Bodystyle 6.0.0](https://github.com/FedeManzano/bodystyle) - **Próxima versión sin jQuery** (incluirá Dynamics-Tips 3.0)
 - [Bodystyle Docs](https://bodystyle.webcindario.com/) - Documentación oficial
 
 ---
