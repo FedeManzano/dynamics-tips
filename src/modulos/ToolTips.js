@@ -1,11 +1,4 @@
 
-/*!
- * Módulo que permite la gestión de los Tooltips
- * A partir de la versión 2.5.0 se mejoró 
- * la apariencia y se cambiaron las funciones DEPRECATED
- * por las actuales de JQUERY.
- */
-
 
 // Módulo de posicionamiento general de todos los módulos
 import Direccion from "./posicionamineto/Direccion";
@@ -88,12 +81,7 @@ import Direccion from "./posicionamineto/Direccion";
         activo = false
     }
 
-    /**
-     * Función que gestiona el evento click del usuario
-     * @param {Elemento origen que desencadena el evento} e 
-     */
     const eventoClick = (e) => {
-        // Singleton pattern for comp
         if (!comp) {
             comp = document.createElement("div")
             comp.classList.add("tips-complemento")
@@ -123,10 +111,8 @@ import Direccion from "./posicionamineto/Direccion";
     }
 
     const inicializar = () => {
-        console.log("ToolTips: inicializar")
         document.querySelectorAll(".tips-ele").forEach((e) => {
             let evento = e.dataset.evt
-            console.log("ToolTips: element found", e, "event:", evento)
             if (evento === "click")
                 eventoClick(e)
             else if (evento === "hover")

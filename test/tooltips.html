@@ -23,8 +23,8 @@
 
 <body>
 
-    <div id="test" class="estilos">
-        <button class="tips-ele" data-tips="Esto es un Tips Derecho" data-pos="right">Derecha</button>
+    <div id="test" class="">
+        <button class="tips-ele" data-tips="Esto es un Tips Derecho" data-pos="bottom">Derecha</button>
         <button class="tips-ele" data-tips="Esto es un Tips Izquierdo" data-pos="left">Izquierda</button>
         <button class="tips-ele" data-tips="Esto es un Tips Abajo" data-pos="bottom">Abajo</button>
         <button class="tips-ele" data-tips="Esto es un Tips Arriba" data-pos="top">Arriba</button>
@@ -32,7 +32,7 @@
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
     <script src="../dist/js/dynamics.js"></script>
 
     <script>
@@ -41,8 +41,13 @@
                 DY.ToolTipsInit()
             }, 100)
         }
-
-        $("#test").append(`<button class='tips-ele' data-tips='Esto es un botón dinámico'>Dinámico</button>`)
+        const boton = document.createElement("button")
+        boton.classList.add("tips-ele")
+        boton.dataset.tips = "Esto es un Tips Click"
+        boton.dataset.pos = "top"
+        boton.dataset.evt = "click"
+        boton.innerHTML = "Click"
+        document.getElementById("test").appendChild(boton)
     </script>
 </body>
 
