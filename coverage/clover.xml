@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1764783159045" clover="3.2.0">
-  <project timestamp="1764783159046" name="All files">
-    <metrics statements="215" coveredstatements="205" conditionals="55" coveredconditionals="38" methods="56" coveredmethods="51" elements="326" coveredelements="294" complexity="0" loc="215" ncloc="215" packages="2" files="3" classes="3"/>
+<coverage generated="1764786026581" clover="3.2.0">
+  <project timestamp="1764786026581" name="All files">
+    <metrics statements="320" coveredstatements="306" conditionals="87" coveredconditionals="62" methods="82" coveredmethods="76" elements="489" coveredelements="444" complexity="0" loc="320" ncloc="320" packages="2" files="4" classes="4"/>
     <package name="modulos">
-      <metrics statements="155" coveredstatements="153" conditionals="37" coveredconditionals="29" methods="41" coveredmethods="37"/>
+      <metrics statements="260" coveredstatements="254" conditionals="69" coveredconditionals="53" methods="67" coveredmethods="62"/>
       <file name="ComentariosDinamicos.js" path="C:\Users\feder\OneDrive\Documentos\workspace_all\web_workspace\repositorios\dynamics-tips\dynamics-tips\src\modulos\ComentariosDinamicos.js">
         <metrics statements="80" coveredstatements="79" conditionals="21" coveredconditionals="18" methods="19" coveredmethods="19"/>
         <line num="4" count="1" type="stmt"/>
@@ -86,6 +86,114 @@
         <line num="130" count="18" type="stmt"/>
         <line num="131" count="21" type="stmt"/>
         <line num="134" count="1" type="stmt"/>
+      </file>
+      <file name="DropDown.js" path="C:\Users\feder\OneDrive\Documentos\workspace_all\web_workspace\repositorios\dynamics-tips\dynamics-tips\src\modulos\DropDown.js">
+        <metrics statements="105" coveredstatements="101" conditionals="32" coveredconditionals="24" methods="26" coveredmethods="25"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="17" type="stmt"/>
+        <line num="11" count="17" type="stmt"/>
+        <line num="12" count="17" type="cond" truecount="1" falsecount="1"/>
+        <line num="13" count="17" type="stmt"/>
+        <line num="14" count="17" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="17" type="stmt"/>
+        <line num="16" count="17" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="33" count="8" type="stmt"/>
+        <line num="35" count="8" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="41" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="50" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="55" count="7" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="66" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="77" count="1" type="stmt"/>
+        <line num="80" count="1" type="stmt"/>
+        <line num="81" count="11" type="stmt"/>
+        <line num="84" count="1" type="stmt"/>
+        <line num="85" count="1" type="stmt"/>
+        <line num="89" count="1" type="stmt"/>
+        <line num="90" count="13" type="stmt"/>
+        <line num="91" count="13" type="stmt"/>
+        <line num="93" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="94" count="13" type="stmt"/>
+        <line num="95" count="13" type="stmt"/>
+        <line num="96" count="13" type="stmt"/>
+        <line num="97" count="13" type="stmt"/>
+        <line num="98" count="13" type="stmt"/>
+        <line num="100" count="13" type="stmt"/>
+        <line num="103" count="1" type="stmt"/>
+        <line num="105" count="13" type="stmt"/>
+        <line num="106" count="13" type="stmt"/>
+        <line num="107" count="13" type="stmt"/>
+        <line num="108" count="13" type="stmt"/>
+        <line num="110" count="13" type="stmt"/>
+        <line num="111" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="112" count="12" type="stmt"/>
+        <line num="113" count="12" type="stmt"/>
+        <line num="114" count="12" type="stmt"/>
+        <line num="115" count="12" type="stmt"/>
+        <line num="116" count="12" type="stmt"/>
+        <line num="118" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="119" count="1" type="stmt"/>
+        <line num="121" count="11" type="stmt"/>
+        <line num="125" count="1" type="stmt"/>
+        <line num="126" count="1" type="stmt"/>
+        <line num="131" count="13" type="stmt"/>
+        <line num="132" count="12" type="stmt"/>
+        <line num="136" count="13" type="stmt"/>
+        <line num="137" count="19" type="cond" truecount="4" falsecount="0"/>
+        <line num="138" count="9" type="stmt"/>
+        <line num="143" count="13" type="stmt"/>
+        <line num="144" count="11" type="cond" truecount="1" falsecount="1"/>
+        <line num="145" count="11" type="stmt"/>
+        <line num="147" count="11" type="stmt"/>
+        <line num="148" count="11" type="stmt"/>
+        <line num="150" count="11" type="stmt"/>
+        <line num="154" count="1" type="stmt"/>
+        <line num="156" count="15" type="stmt"/>
+        <line num="157" count="15" type="stmt"/>
+        <line num="158" count="15" type="stmt"/>
+        <line num="162" count="15" type="stmt"/>
+        <line num="163" count="14" type="stmt"/>
+        <line num="167" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="168" count="13" type="stmt"/>
+        <line num="169" count="13" type="stmt"/>
+        <line num="170" count="13" type="stmt"/>
+        <line num="174" count="15" type="stmt"/>
+        <line num="175" count="13" type="stmt"/>
+        <line num="178" count="15" type="stmt"/>
+        <line num="179" count="15" type="stmt"/>
+        <line num="182" count="1" type="stmt"/>
+        <line num="183" count="13" type="stmt"/>
+        <line num="184" count="15" type="stmt"/>
+        <line num="187" count="1" type="stmt"/>
       </file>
       <file name="ToolTips.js" path="C:\Users\feder\OneDrive\Documentos\workspace_all\web_workspace\repositorios\dynamics-tips\dynamics-tips\src\modulos\ToolTips.js">
         <metrics statements="75" coveredstatements="74" conditionals="16" coveredconditionals="11" methods="22" coveredmethods="18"/>

@@ -15,6 +15,7 @@
   <a href="https://github.com/FedeManzano/dynamics-tips/releases"><img src="https://img.shields.io/badge/version-3.0.0-red" alt="Version"></a>
   <img src="https://img.shields.io/badge/jQuery-free-brightgreen" alt="jQuery Free">
   <img src="https://img.shields.io/badge/size-20.2KB-blue" alt="Bundle Size">
+  <img src="https://img.shields.io/badge/coverage-94%25-brightgreen" alt="Coverage">
 </p>
 
 <p align="center">

@@ -45,6 +45,12 @@ import Direccion from "./posicionamineto/Direccion";
                 e.style.display = "none"
             })
             press = false
+
+            // Si el click fue en el mismo elemento, no volvemos a abrir
+            if (elemento === this) {
+                elemento = null
+                return
+            }
         }
         activar(this)
     }
