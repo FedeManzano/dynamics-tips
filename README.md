@@ -162,7 +162,7 @@ Información contextual que aparece al interactuar con un elemento.
 | `data-pos` | Posición | `top`, `bottom`, `left`, `right` | `bottom` |
 | `data-evt` | Evento disparador | `hover`, `click` | `hover` |
 
-[Ver ejemplos completos →](https://bodystyle.webcindario.com/paginas/tooltips.html)
+[Ver ejemplos completos →](https://fedemanzano.github.io/docs-bodystyle/pages/tooltips.html)
 
 ---
 
@@ -187,7 +187,7 @@ Cuadros de información más grandes para contenido extenso.
 | `data-pos` | Posición | `top`, `bottom`, `left`, `right` | `bottom` |
 | `data-evt` | Evento disparador | `hover`, `click` | `hover` |
 
-[Ver ejemplos completos →](https://bodystyle.webcindario.com/paginas/comentarios.html)
+[Ver ejemplos completos →](https://fedemanzano.github.io/docs-bodystyle/pages/comentarios.html)
 
 ---
 
@@ -223,7 +223,7 @@ Listas desplegables vinculadas a elementos disparadores.
 | `data-evt` | Evento disparador | `hover`, `click` | `click` |
 | `data-color` | Color de la flecha | Color CSS | `#000` |
 
-[Ver ejemplos completos →](https://bodystyle.webcindario.com/paginas/dropdown.html)
+[Ver ejemplos completos →](https://fedemanzano.github.io/docs-bodystyle/pages/dropdown.html)
 
 ---
 
@@ -249,7 +249,7 @@ DY.Toast({
 | `tiempo` | Number | Duración en ms | `3000` |
 | `cerrar` | Boolean | Botón de cierre manual | `false` |
 
-[Ver ejemplos completos →](https://bodystyle.webcindario.com/paginas/toast.html)
+[Ver ejemplos completos →](https://fedemanzano.github.io/docs-bodystyle/pages/toasts.html)
 
 ---
 
@@ -264,7 +264,7 @@ DY.PerInit({
 });
 ```
 
-[Ver ejemplos completos →](https://bodystyle.webcindario.com/paginas/personalizados.html)
+[Ver ejemplos completos →](https://fedemanzano.github.io/docs-bodystyle/pages/personalizados.html)
 
 ---
 
@@ -319,7 +319,7 @@ sass --style compressed sass/dynamics.scss dist/css/dynamics.min.css
 
 ### Documentación Completa
 
-- [Documentación Bodystyle](https://bodystyle.webcindario.com/)
+- [Documentación Bodystyle](https://fedemanzano.github.io/docs-bodystyle)
 - [Descargar Docs PDF](https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk)
 
 ### API Global
